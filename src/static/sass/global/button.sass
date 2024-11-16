@@ -1,0 +1,49 @@
+.btn
+  display: inline-block
+  font-weight: 500
+  +fs(16px)
+  border-radius: 8px
+  color: var(--primary-invers)
+  background: var(--primary)
+  border: 1px solid transparent
+  padding: 2.3rem 2.5rem
+  cursor: pointer
+  line-height: .875
+  transition: .5s ease
+  box-sizing: border-box
+  text-align: center
+  text-transform: uppercase
+  +screen('max', 600)
+    +fs(14px)
+  &:hover
+    color: var(--hover)
+  &_secondary
+    background: var(--secondary)
+  &_transparent
+    border-color: var(--primary)
+    background: none
+  &_icon
+    display: inline-flex
+    align-items: center
+    gap: 1rem
+    line-height: 1
+
+.slider-arrows
+  display: inline-flex
+  gap: .5rem
+
+.slider-arrow
+  border-radius: 8px
+  width: 73px
+  height: 73px
+  display: flex
+  justify-content: center
+  align-items: center
+  background: var(--primary-invers)
+  transition: .5s ese
+  path
+    transition: .5s ese
+  &:hover
+    background: var(--primary)
+    path
+      stroke: var(--primary-invers)

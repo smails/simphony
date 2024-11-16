@@ -1,0 +1,42 @@
++b.proposal
+  +e.inner.inner
+    +e.FORM.search()
+      +e.col
+        +e.caption Комнатность
+        +e.list
+          +e.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="room" value='Студия' checked)
+            +e.SPAN.txt Студия
+          +e.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="room" value='1')
+            +e.SPAN.txt 1
+          +e.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="room" value='2')
+            +e.SPAN.txt 2
+          +e.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="room" value='3')
+            +e.SPAN.txt 3
+      +e.col
+        +e.caption Общая площадь, м²
+        +e.row.squere
+          +e.group
+            input(type="hidden" name="PRICE_START" id="PRICE_START" class="price_start" value="1")
+            +e.field.range-start 0
+          +e.group
+            input(type="hidden" name="PRICE_END" class="price_end" value="25")
+            +e.field.range-end 0
+          .slider
+      +e.col
+        +e.caption Этаж
+        +e.row.price
+          +e.group
+            input(type="hidden" name="PRICE_START" id="PRICE_START" class="price_start" value="1")
+            +e.field.range-start 0
+          +e.group
+            input(type="hidden" name="PRICE_END" class="price_end" value="25")
+            +e.field.range-end 0
+          .slider
+      +e.col
+        +e.A.submit.btn_secondary.js-open-modal(href="#success") Показать
+          span 1 230 
+          | вариантов

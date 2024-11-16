@@ -1,0 +1,41 @@
+.banner
+  box-sizing: border-box
+  padding-inline: .8rem
+  &__inner
+    position: relative
+  &__slide
+    position: relative
+  &__pic
+    width: 100%
+    border-radius: 8px
+  &__content
+    position: absolute
+    top: 7rem
+    left: 4rem
+    color: var(--primary-invers)
+  &__sign
+    padding: 0.9rem 1.6rem
+    background: var(--secondary)
+    border-radius: 8px
+    text-transform: uppercase
+    color: var(--primary-invers)
+    font-weight: 500
+    margin-bottom: 3rem
+    display: inline-block
+  &__title
+    margin-bottom: 1.7rem
+    max-width: 1055px
+  &__txt
+    +fs(24px)
+    line-height: 1.4
+    max-width: 700px
+    margin-bottom: 4rem
+  &__btn
+    width: 296px
+  .slider-arrows
+    position: absolute
+    bottom: 4.5rem
+    right: 4.5rem
+    z-index: 2
+  .slick-slide
+    height: auto
