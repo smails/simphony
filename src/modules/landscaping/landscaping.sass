@@ -1,0 +1,67 @@
+.landscaping
+  margin: 14rem 0 10rem
+  &__head
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    gap: 2rem
+    position: relative
+    &:before
+      content: ''
+      width: 189px
+      height: 157px
+      background-image: url(../icon/note.svg)
+      background-repeat: no-repeat
+      background-position: center
+      position: absolute
+      bottom: 0
+      left: -5rem
+  &__sign
+    font-weight: 500
+    text-transform: uppercase
+    +fs(30px)
+  &__info
+    max-width: 1190px
+  &__title
+    +fs(88px)
+    line-height: 1.2
+    letter-spacing: -0.02em
+    margin-bottom: 4rem
+    font-weight: 400
+  &__text
+    +fs(20px)
+    line-height: 1.3
+    opacity: 0.8
+    column-count: 2
+    p
+      margin-right: 3vw
+  &__wrapper
+    margin-left: 5rem
+    position: relative
+    margin-top: 7rem
+  &__slide
+    width: 70%
+    max-width: 1208px
+  &__pic
+    width: 100%
+    border-radius: 8px
+  &__caption
+    margin: 3.5rem 0
+    +fs(42px)
+    line-height: 1.1
+    font-weight: 500
+  &__txt
+    +fs(24px)
+    line-height: 1.3
+    max-width: 821px
+  .slick-slide
+    margin-right: 2rem
+  .slider-arrows
+    position: absolute
+    right: 6rem
+    top: 40%
+    transform: translateY(-75%)
+    z-index: 2
+  .slider-arrow
+    &_prev
+      display: none

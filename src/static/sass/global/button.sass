@@ -19,16 +19,32 @@
     color: var(--hover)
   &_secondary
     background: var(--secondary)
+    &:hover
+      background: var(--primary)
+      color: var(--primary-invers)
   &_transparent
     border-color: var(--primary)
     background: none
+    color: var(--primary)
+    padding: 1.7rem 3rem
+    &:hover
+      background: var(--primary)
+      color: var(--primary-invers)
+      path
+        fill: var(--primary-invers)
   &_icon
     display: inline-flex
     align-items: center
     gap: 1rem
     line-height: 1
+    path
+      transition: .5s ease
 
 .slider-arrows
+  display: inline-flex
+  gap: .5rem
+
+.slider-nav
   display: inline-flex
   gap: .5rem
 
@@ -47,3 +63,18 @@
     background: var(--primary)
     path
       stroke: var(--primary-invers)
+
+.slider-btn-border
+  border-radius: 8px
+  width: 73px
+  height: 73px
+  display: flex
+  justify-content: center
+  align-items: center
+  border: 1px solid var(--primary)
+  transition: .5s ese
+  opacity: .3
+  path
+    transition: .5s ese
+  &:hover
+    opacity: 1

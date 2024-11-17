@@ -1,0 +1,57 @@
+.callback
+  &__box
+    background: var(--primary)
+    border-radius: 8px
+    padding: 4.5rem 6.8rem
+    box-sizing: border-box
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    gap: 2rem
+  &__content
+    max-width: 796px
+    color: var(--primary-invers)
+  &__title
+    +fs(56px)
+    line-height: 1.1
+    letter-spacing: -0.01em
+    margin-bottom: 3.5rem
+  &__sign
+    opacity: 0.7
+    +fs(24px)
+    line-height: 120%
+  &__action
+    max-width: 761px
+    display: flex
+    flex-wrap: wrap
+    gap: 2.5rem
+    align-items: flex-end
+  &__group
+    width: 50%
+  &__submit
+    width: 45%
+    padding: 2.85rem 2rem
+    +fs(18px)
+  &__name
+    +fs(18px)
+    line-height: 1.2
+    margin-bottom: 1.2rem
+    color: var(--primary-invers)
+  &__field
+    border: 1.33px solid var(--primary-invers)
+    border-radius: 8px
+    padding: 2.1rem 2rem
+    box-sizing: border-box
+    +fs(20px)
+    color: var(--primary)
+    width: 100%
+    line-height: 1
+    &::placeholder
+      opacity: 0.6
+  &__req
+    flex-grow: 1
+    +fs(16px)
+    color: rgba(255, 255, 255, 0.5)
+    a
+      font-weight: 500
+      color: var(--primary-invers)

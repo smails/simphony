@@ -1,0 +1,66 @@
+.about
+  padding-block: 6rem 8rem
+  position: relative
+  &:before
+    content: ''
+    width: 189px
+    height: 157px
+    background-image: url(../icon/note.svg)
+    background-repeat: no-repeat
+    background-position: center
+    position: absolute
+    top: 2rem
+    right: 0
+  &__inner
+    display: flex
+    align-items: center
+    gap: min(11rem, 8vw)
+  &__video
+    position: relative
+    flex-shrink: 0
+    &:after
+      content: 'Видео о проекте'
+      position: absolute
+      bottom: -40px
+      left: 0
+      +fs(21px)
+      opacity: 0.4
+  &__play
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 2
+    border-radius: 8px
+  &__title
+    +fs(88px)
+    line-height: 1.2
+    letter-spacing: -0.02em
+    margin-bottom: 2rem
+    font-weight: 400
+  &__txt
+    line-height: 1.2
+    +fs(24px)
+    opacity: 0.8
+  &__vnt
+    display: flex
+    flex-wrap: wrap
+    gap: 6rem
+    margin: 5rem 0
+  &__numb
+    +fs(38px)
+    line-height: 1
+    font-weight: 500
+    margin-bottom: .2rem
+  &__sign
+    +fs(18px)
+    color: #4d545a
+  &__control
+    margin-top: 5rem
+    display: flex
+    gap: 2rem
+  &__btn
+    width: 320px
+  &__call
+    line-height: 25px
+    width: 320px
