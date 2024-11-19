@@ -1,0 +1,72 @@
++b.plane
+  +e.inner
+    +e.H2.title.big-title планировки
+    +e.sort
+      +e.P.holder Особенности
+      +e.checks
+        each item in ['Терраса ', 'Мастер-спальня ', 'Двухуровневая ', 'Гардеробная ', 'Гардеробная с окном ', 'Лоджия на две комнаты ', 'Возможность второго этажа ']
+          +b.LABEL.check
+            +e.INPUT.hidden(type="checkbox")
+            +e.SPAN.txt=item
+              i (12)
+    +e.box
+      +e.row
+        +e.nav
+          +e.BUTTON.btn.active Студия 
+            span (1 178)
+          +e.BUTTON.btn 1-комнатные
+            span (576)
+          +e.BUTTON.btn 2-комнатные
+            span (68)
+          +e.BUTTON.btn 3-комнатные
+            span (3 446)
+          +e.BUTTON.btn 4-комнатные
+            span (135)
+          +e.BUTTON.btn Парковочное место
+            span (360)
+        +e.wrapper
+          - for(var i = 0; i < 6; i++){
+            +e.container
+              +e.tabs
+                +e.tab.active Тип 1
+                +e.tab Тип 2
+                +e.tab Тип 3
+                +e.tab Тип 4
+              +e.items
+                - for(var k = 0; k < 4; k++){
+                  +e.element
+                    +b.plane-item
+                      +e.picture
+                        +e.nav
+                          +e.tab.active Планировка
+                          +e.tab Расстановка мебели
+                        +e.pics
+                          +e.IMG.pic(src='/img/plane.png' alt='')
+                          +e.IMG.pic(src='/img/plane.png' alt='')
+                      +e.content
+                        +e.P.title Квартира - студия
+                        +e.P.squere Общая площадь 
+                          span 18-20 м²
+                        +e.set
+                          +e.item
+                            +e.IMG.icon(src='/icon/set-1.svg' alt='')
+                            +e.SPAN.txt Терраса 
+                          +e.item
+                            +e.IMG.icon(src='/icon/set-4.svg' alt='')
+                            +e.SPAN.txt Гардеробная  
+                          +e.item
+                            +e.IMG.icon(src='/icon/set-2.svg' alt='')
+                            +e.SPAN.txt Мастер-спальня  
+                          +e.item
+                            +e.IMG.icon(src='/icon/set-5.svg' alt='')
+                            +e.SPAN.txt Лоджия на две комнаты 
+                          +e.item
+                            +e.IMG.icon(src='/icon/set-2.svg' alt='')
+                            +e.SPAN.txt Двухуровневая  
+                        +e.control
+                          +e.A.btn.btn_transparent(href="#") Все планировки этого типа
+                          +e.A.btn.btn_secondary(href="#") Оставить заявку
+                  - }
+          - }
+      +e.P.req Все квартиры в ЖК Симфония Нижний свободной планировки и сдаются без отделки. Представленное разделение на комнаты и расстановка перегородок - носит условный характер и является одним из возможных способов зонирования пространства.
+      include ../callback/callbackTwo

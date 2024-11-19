@@ -1,2 +1,42 @@
 .group
   display: inline-block
+
+.check
+  cursor: pointer
+  &__hidden
+    display: none
+    &:checked + .check__txt
+      &:after
+        opacity: 1
+        visibility: visible
+  &__txt
+    padding-left: 45px
+    position: relative
+    +fs(20px)
+    color: var(--primary-invers)
+    &:before
+      content: ''
+      width: 30px
+      height: 29px
+      border-radius: 5px
+      border: 1px solid rgba(255, 255, 255, .4)
+      position: absolute
+      left: 0
+      top: 0
+      box-sizing: border-box
+    &:after
+      content: ''
+      width: 26px
+      height: 25px
+      background: rgba(255, 255, 255, .4)
+      border-radius: 3px
+      position: absolute
+      left: 2px
+      top: 2px
+      transition: .5s ease
+      opacity: 0
+      visibility: hidden
+    i
+      font-style: normal
+      color: #000
+      color: rgba(255, 255, 255, 0.7)

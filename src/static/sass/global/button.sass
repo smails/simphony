@@ -57,6 +57,7 @@
   align-items: center
   background: var(--primary-invers)
   transition: .5s ese
+  cursor: pointer
   path
     transition: .5s ese
   &:hover
@@ -64,17 +65,21 @@
     path
       stroke: var(--primary-invers)
 
-.slider-btn-border
-  border-radius: 8px
-  width: 73px
-  height: 73px
+.slider-btn
   display: flex
-  justify-content: center
-  align-items: center
-  border: 1px solid var(--primary)
-  transition: .5s ese
-  opacity: .3
-  path
+  gap: .5rem
+  &__border
+    border-radius: 8px
+    width: 73px
+    height: 73px
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 1px solid var(--primary)
     transition: .5s ese
-  &:hover
-    opacity: 1
+    opacity: .3
+    cursor: pointer
+    path
+      transition: .5s ese
+    &:hover
+      opacity: 1

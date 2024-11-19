@@ -13,3 +13,30 @@ main
   padding-inline: 5rem
   margin: 0 auto
   box-sizing: border-box
+
+.swiper
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  overflow: hidden
+  list-style: none
+  padding: 0
+  z-index: 1
+  display: block
+
+.swiper-wrapper
+  position: relative
+  width: 100%
+  z-index: 1
+  display: flex
+  transition-property: transform
+  transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial)
+  box-sizing: content-box
+  gap: 2rem
+
+.swiper-slide
+  flex-shrink: 0
+  width: 100%
+  position: relative
+  transition-property: transform
+  display: block

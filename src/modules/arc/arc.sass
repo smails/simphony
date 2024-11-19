@@ -24,6 +24,8 @@
     visibility: hidden
     transition: .5s ease
   &__title
+    font-size: 17vw
+  &__caption
     font-weight: 500
     +fs(34px)
     margin-bottom: 2rem
@@ -31,9 +33,9 @@
     +fs(18px)
     line-height: 1.2
     opacity: 0.8
-  .slick-slide
-    height: auto
-  .slick-current
+  .swiper-slide
+    max-width: 1707px
+  .swiper-slide-active
     .arc__content
       opacity: 1
       visibility: visible
