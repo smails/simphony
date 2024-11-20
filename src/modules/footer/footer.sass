@@ -1,0 +1,217 @@
+.footer
+  padding-top: 8rem
+  +screen('max', 1000)
+    padding-top: 5rem
+  +screen('max', 700)
+    padding-top: 1.5rem
+  &__row
+    display: flex
+    justify-content: space-between
+    gap: 9rem
+    position: relative
+    +screen('max', 1700)
+      gap: 7rem
+    +screen('max', 1300)
+      gap: 4rem
+    +screen('max', 1000)
+      flex-flow: column
+      gap: 3rem
+    +screen('max', 700)
+      gap: 2.5rem
+  &__left
+    display: flex
+    flex-flow: column
+    gap: 4.5rem
+    flex-shrink: 0
+    +screen('max', 1000)
+      flex-flow: row
+      justify-content: space-between
+      order: -2
+  &__right
+    text-align: right
+    max-width: 300px
+    +screen('max', 1700)
+      max-width: 229px
+    +screen('max', 1000)
+      order: -1
+      max-width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      flex-wrap: wrap
+      gap: 2.5rem
+  &__pic
+    width: 129px
+    +screen('max', 1700)
+      width: 97px
+    +screen('max', 700)
+      width: 79px
+  &__icon
+    width: 216px
+    +screen('max', 1700)
+      width: 159px
+    +screen('max', 700)
+      width: 134px
+  &__middle
+    flex-grow: 1
+    display: grid
+    grid-template-columns: 170px repeat(3, 1fr)
+    grid-template-rows: repeat(2, 180px)
+    gap: 4rem min(9rem, 4vw)
+    +screen('max', 1700)
+      grid-template-columns: 120px repeat(3, 1fr)
+    +screen('max', 1300)
+      grid-template-columns: 170px repeat(2, 1fr)
+      grid-template-rows: repeat(3, 180px)
+      gap: 2rem 4rem
+    +screen('max', 1000)
+      display: block
+      padding-bottom: 7rem
+  &__list
+    &:nth-of-type(2)
+      +screen('max', 1300)
+        grid-row: 3/4
+        grid-column: 1/1
+    &:nth-of-type(3)
+      grid-row: 1/3
+      grid-column: 3/4
+    &:nth-of-type(4)
+      grid-row: 1/3
+      grid-column: 4/5
+      +screen('max', 1300)
+        grid-column: 2/3
+        grid-row: 2/3
+    &:nth-of-type(6)
+      +screen('max', 1300)
+        grid-row: 1/2
+        grid-column: 2/3
+  &__item
+    margin-bottom: 1.4rem
+    +screen('max', 1700)
+      margin-bottom: 1rem
+    &.open-nav
+      position: relative
+      &:before
+        content: ''
+        width: 20px
+        height: 11px
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='11' fill='none'%3E%3Cpath stroke='%230E302A' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1 1 9.0443 8.5L19.0887 1'/%3E%3C/svg%3E")
+        background-size: contain
+        background-repeat: no-repeat
+        transition: .5s ease
+        +screen('max', 700)
+          width: 13px
+          height: 7px
+    &.open
+      &:before
+        transform: translateY(-50%) rotate(180deg)
+  &__items
+    &.hidden
+      display: none
+  &__cat
+    font-weight: 500
+    +fs(24px)
+    display: inline-block
+    padding-bottom: 0.6rem
+    +screen('max', 1700)
+      +fs(18px)
+      padding-bottom: 0.2rem
+    +screen('max', 1000)
+      +fs(26px)
+    +screen('max', 700)
+      +fs(18px)
+    &:hover
+      color: var(--secondary)
+  &__link
+    +fs(18px)
+    color: #4d545a
+    +screen('max', 1700)
+      +fs(14px)
+    +screen('max', 1000)
+      +fs(20px)
+    +screen('max', 700)
+      +fs(14px)
+    &:hover
+      color: var(--secondary)
+  &__phone
+    font-weight: 500
+    +fs(34px)
+    +screen('max', 1700)
+      +fs(24px)
+    +screen('max', 1300)
+      +fs(20px)
+    +screen('max', 1000)
+      +fs(26px)
+    +screen('max', 700)
+      +fs(20px)
+  &__call
+    margin: 3rem 0
+    +screen('max', 1700)
+      margin: 2rem 0
+    +screen('max', 1000)
+      margin: 0
+      order: 1
+      width: 100%
+  &__mail
+    font-weight: 500
+    +fs(24px)
+    +screen('max', 1700)
+      +fs(18px)
+    +screen('max', 1000)
+      +fs(26px)
+    +screen('max', 700)
+      +fs(16px)
+  &__social
+    display: flex
+    justify-content: flex-end
+    gap: 1.4rem
+    margin: 5.5rem 0 3.5rem
+    +screen('max', 1700)
+      margin: 4rem 0 2rem
+    +screen('max', 1000)
+      margin: 0
+      position: absolute
+      left: 0
+      bottom: 0
+  &__soc
+    svg
+      +screen('max', 1700)
+        width: 54px
+        height: 54px
+  &__build
+    +fs(24px)
+    +screen('max', 1700)
+      +fs(18px)
+    +screen('max', 1000)
+      position: absolute
+      bottom: 0
+      right: 0
+    +screen('max', 700)
+      +fs(14px)
+    b
+      +screen('max', 1000)
+        display: block
+        +fs(25px)
+      +screen('max', 700)
+        +fs(20px)
+  &__copyright
+    border-top: 1px solid rgba(0, 0, 0, .2)
+    padding-block: 4rem
+    margin-top: 8rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +fs(18px)
+    color: #4d545a
+    +screen('max', 1000)
+      margin-top: 3rem
+      padding-block: 2.5rem
+      +fs(20px)
+    +screen('max', 700)
+      flex-flow: column-reverse
+      align-items: flex-start
+      +fs(14px)

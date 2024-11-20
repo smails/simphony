@@ -8,15 +8,31 @@
   width: 100%
   background: var(--primary-invers)
   z-index: 99
+  +screen('max', 1000)
+    border-top-width: 5px
+  +screen('max', 700)
+    border-top-width: 3px
+    padding-block: 1.5rem
   &__inner
     display: flex
     justify-content: space-between
     gap: 5rem
+    +screen('max', 1840)
+      gap: 3.5rem
+  &__icon
+    +screen('max', 1700)
+      width: 153px
+    +screen('max', 700)
+      width: 135px
   &__nav
     flex-grow: 1
     display: flex
     align-items: center
     gap: 5rem
+    +screen('max', 1700)
+      gap: 3.5rem
+    +screen('max', 700)
+      order: 1
   &__open-nav
     border: 1px solid var(--primary)
     background: var(--primary-invers)
@@ -30,12 +46,17 @@
     cursor: pointer
     position: relative
     text-transform: uppercase
+    +screen('max', 1700)
+      +fs(12px)
+      padding: 1rem 1.2rem
   &__list
     display: flex
     gap: 3.5rem
     position: relative
     top: 5px
-    +screen('max', 1300)
+    +screen('max', 1700)
+      gap: 2.5rem
+    +screen('max', 1405)
       display: none
   &__item
     margin-bottom: 0
@@ -60,6 +81,8 @@
     display: inline-block
     text-transform: uppercase
     color: var(--primary)
+    +screen('max', 1700)
+      +fs(12px)
     &:hover
       color: var(--secondary)
   &__dropdown
@@ -83,23 +106,47 @@
     justify-content: flex-end
     align-items: center
     gap: 4rem
+    +screen('max', 1700)
+      gap: 3rem
   &__control
     display: flex
     align-items: center
     gap: 1.4rem
+    +screen('max', 700)
+      display: none
+  &__ctr, &__open-modal
+    svg
+      +screen('max', 1700)
+        width: 45px
+        height: 45px
   &__call
     display: flex
     align-items: center
     justify-content: flex-end
     gap: 2rem
+    +screen('max', 700)
+      position: relative
+      right: -20px
   &__call-box
     text-align: right
     color: var(--primary)
+    +screen('max', 700)
+      display: none
   &__phone
     +fs(26px)
     font-weight: 500
     margin-bottom: 0.7rem
+    +screen('max', 1700)
+      +fs(20px)
     &:hover
       color: var(--secondary)
   &__time
     opacity: 0.6
+    +screen('max', 1700)
+      +fs(12px)
+  &__btn
+    +screen('max', 1700)
+      +fs(12px)
+      padding: 1.7rem 2rem
+    +screen('max', 1000)
+      display: none

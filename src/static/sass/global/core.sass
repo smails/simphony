@@ -13,6 +13,13 @@ main
   padding-inline: 5rem
   margin: 0 auto
   box-sizing: border-box
+  max-width: 1920px
+  +screen('max', 1500)
+    padding-inline: 4rem
+  +screen('max', 1300)
+    padding-inline: 2rem
+  +screen('max', 700)
+    padding-inline: 1.5rem
 
 .swiper
   margin-left: auto

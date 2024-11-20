@@ -2,11 +2,15 @@
   &__inner
     padding-inline: .8rem
     box-sizing: border-box
+    max-width: 1920px
+    margin: 0 auto
   &__title
     font-size: 15.95vw
     position: relative
     left: -24px
     margin-bottom: -15rem
+    +screen('min', 1921)
+      +fs(307px)
   &__sort
     padding: 6rem 4rem
     box-sizing: border-box

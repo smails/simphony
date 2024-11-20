@@ -1,4 +1,7 @@
 .arc
+  &__inner
+    max-width: 1920px
+    margin: 0 auto
   &__wrapper
     margin-top: -12rem
     position: relative
@@ -25,6 +28,8 @@
     transition: .5s ease
   &__title
     font-size: 17vw
+    +screen('min', 1921)
+      +fs(337px)
   &__caption
     font-weight: 500
     +fs(34px)
