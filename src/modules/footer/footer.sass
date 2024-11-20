@@ -56,13 +56,13 @@
     flex-grow: 1
     display: grid
     grid-template-columns: 170px repeat(3, 1fr)
-    grid-template-rows: repeat(2, 180px)
+    grid-template-rows: repeat(2, auto)
     gap: 4rem min(9rem, 4vw)
     +screen('max', 1700)
       grid-template-columns: 120px repeat(3, 1fr)
     +screen('max', 1300)
       grid-template-columns: 170px repeat(2, 1fr)
-      grid-template-rows: repeat(3, 180px)
+      grid-template-rows: repeat(3, auto)
       gap: 2rem 4rem
     +screen('max', 1000)
       display: block

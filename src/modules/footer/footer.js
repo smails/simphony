@@ -10,12 +10,13 @@ $(window).on('load resize', () => {
   $('.footer__items').prev().removeClass('open-nav');
 })
 
-$(document).on('click', '.open-nav', function() {
+$(document).on('click', '.nav__item.open-nav', function() {
   if($(this).hasClass('open')){
     $(this).removeClass('open');
     $(this).next().addClass('hidden');
     return
+  } else{
+    $(this).addClass('open');
+    $(this).next().removeClass('hidden');
   }
-  $(this).addClass('open');
-  $(this).next().removeClass('hidden');
 })

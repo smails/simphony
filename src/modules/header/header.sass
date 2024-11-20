@@ -13,6 +13,9 @@
   +screen('max', 700)
     border-top-width: 3px
     padding-block: 1.5rem
+  &.open
+    .header__list, .header__btn
+      display: none
   &__inner
     display: flex
     justify-content: space-between
@@ -37,7 +40,7 @@
     border: 1px solid var(--primary)
     background: var(--primary-invers)
     border-radius: 8px
-    padding: 1.5rem 1.6rem
+    padding: 1.2rem 1.6rem
     display: inline-flex
     align-items: center
     gap: 1.2rem
@@ -49,6 +52,29 @@
     +screen('max', 1700)
       +fs(12px)
       padding: 1rem 1.2rem
+    &::before
+      content: 'Закрыть'
+      width: calc(100% + 20px)
+      height: calc(100% + 4px)
+      border-radius: 8px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none'%3E%3Cpath stroke='%230E302A' stroke-linecap='round' stroke-width='1.6' d='M8.35352 21.9609 21.8106 8.50381M8.35352 8.50391 21.8106 21.961'/%3E%3C/svg%3E")
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: 12px center
+      background-color: var(--primary-invers)
+      background-size: 30px
+      position: absolute
+      top: -2px
+      left: -13px
+      padding: 1.3rem 1.2rem 1.5rem 5rem
+      box-sizing: border-box
+      opacity: 0
+      visibility: hidden
+      border: 1px solid var(--primary)
+    &.open
+      &::before
+        opacity: 1
+        visibility: visible
   &__list
     display: flex
     gap: 3.5rem
@@ -150,3 +176,297 @@
       padding: 1.7rem 2rem
     +screen('max', 1000)
       display: none
+
+.nav
+  position: fixed
+  top: 117px
+  left: 0
+  width: 100%
+  height: calc(100% - 117px)
+  background: var(--primary-invers)
+  z-index: 33
+  padding: 5rem 5rem 2.2rem
+  box-sizing: border-box
+  overflow: auto
+  display: none
+  +screen('max', 1700)
+    top: 101px
+    padding: 4.5rem 4rem 2.2rem
+    height: calc(100% - 101px)
+  +screen('max', 1200)
+    padding: 4.5rem 2rem 2.2rem
+  +screen('max', 700)
+    padding: 2.5rem 1.5rem 2.2rem
+    top: 78px
+    height: calc(100% - 78px)
+  &:before
+    content: ''
+    width: calc(100% - 10rem)
+    height: 1px
+    position: absolute
+    top: 0
+    left: 5rem
+    background: var(--secondary)
+    +screen('max', 1700)
+      width: calc(100% - 8rem)
+      left: 4rem
+    +screen('max', 1200)
+      width: calc(100% - 4rem)
+      left: 2rem
+    +screen('max', 700)
+      width: calc(100% - 3rem)
+      left: 1.5rem
+  &__inner
+    display: flex
+    justify-content: space-between
+    flex-flow: column
+    height: 100%
+    +screen('max', 1000)
+      gap: 4rem
+    +screen('max', 700)
+      display: block
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    gap: min(10rem, 7vw)
+    +screen('max', 1200)
+      gap: min(5rem, 4vw)
+    +screen('max', 1000)
+      flex-flow: column
+      height: 100%
+    +screen('max', 700)
+      display: block
+      height: auto
+  &__wrap
+    display: flex
+    gap: min(8.5rem, 5vw)
+    flex-grow: 1
+    +screen('max', 1200)
+      gap: 4rem
+    +screen('max', 700)
+      display: block
+  &__col
+    &:first-of-type
+      +screen('max', 1200)
+        width: 20%
+      +screen('max', 700)
+        width: 100%
+    +screen('max', 1200)
+      width: 38%
+      +screen('max', 700)
+        width: 100%
+  &__cat
+    +fs(37px)
+    padding-bottom: 0.9rem
+    display: inline-block
+    line-height: 1
+    +screen('max', 1700)
+      +fs(28px)
+    +screen('max', 1200)
+      +fs(20px)
+    +screen('max', 1000)
+      +fs(22px)
+  &__item
+    margin-bottom: 1.6rem
+    +screen('max', 1700)
+      margin-bottom: 1.1rem
+    &.open-nav
+      position: relative
+      &:before
+        content: ''
+        width: 20px
+        height: 11px
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='11' fill='none'%3E%3Cpath stroke='%230E302A' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1 1 9.0443 8.5L19.0887 1'/%3E%3C/svg%3E")
+        background-size: contain
+        background-repeat: no-repeat
+        transition: .5s ease
+        +screen('max', 700)
+          width: 13px
+          height: 7px
+    &.open
+      &:before
+        transform: translateY(-50%) rotate(180deg)
+  &__items
+    &.hidden
+      display: none
+  &__link
+    +fs(20px)
+    line-height: 1
+    +screen('max', 1700)
+      +fs(16px)
+  &__list
+    margin-bottom: 5.5rem
+    +screen('max', 1700)
+      margin-bottom: 4rem
+    +screen('max', 700)
+      margin-bottom: 0
+  &__banner
+    border-radius: 8px
+    background: rgba(#CE8369, .1)
+    max-width: 592px
+    width: 35%
+    +screen('max', 1000)
+      width: 100%
+      display: flex
+      justify-content: space-between
+      max-width: 100%
+      margin-bottom: 2rem
+  &__pic
+    width: 100%
+    object-fit: cover
+    +screen('max', 1000)
+      width: 216px
+      height: 170px
+    +screen('max', 700)
+      display: none
+  &__banner-info
+    padding: 3rem 3.5rem
+    box-sizing: border-box
+    +screen('max', 1200)
+      padding: 1.5rem
+    +screen('max', 1000)
+      padding: 2.5rem
+    +screen('max', 700)
+      padding: 1.5rem
+  &__time
+    padding: 0.6rem 1rem
+    background: var(--secondary)
+    display: inline-block
+    +fs(18px)
+    color: var(--primary-invers)
+    margin-bottom: 2.8rem
+    border-radius: 100px
+    +screen('max', 1700)
+      +fs(14px)
+    +screen('max', 1200)
+      +fs(12px)
+      margin-bottom: 2rem
+    +screen('max', 1000)
+      +fs(14px)
+    +screen('max', 700)
+      +fs(12px)
+      margin-bottom: 1.5rem
+  &__caption
+    +fs(34px)
+    font-weight: 500
+    line-height: 1.1
+    margin-bottom: 1.7rem
+    +screen('max', 1700)
+      +fs(26px)
+    +screen('max', 1200)
+      +fs(20px)
+      margin-bottom: 1rem
+    +screen('max', 1000)
+      +fs(26px)
+    +screen('max', 700)
+      +fs(18px)
+  &__txt
+    +fs(24px)
+    line-height: 1.3
+    color: #838c95
+    +screen('max', 1700)
+      +fs(18px)
+    +screen('max', 1200)
+      +fs(14px)
+    +screen('max', 1000)
+      +fs(18px)
+    +screen('max', 700)
+      +fs(14px)
+  &__bottom
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 2.5rem
+    border-top: 1px solid var(--primary)
+    +screen('max', 700)
+      flex-flow: column
+      position: relative
+      align-items: flex-start
+  &__contls
+    padding-right: 5rem
+    +screen('max', 1000)
+      display: none
+    +screen('max', 700)
+      display: block
+  &__contl
+    display: flex
+    align-items: center
+    gap: 1.6rem
+    +fs(24px)
+    +screen('max', 1700)
+      +fs(18px)
+    +screen('max', 1000)
+      display: none
+    +screen('max', 700)
+      display: flex
+      margin-bottom: 1rem
+    svg
+      +screen('max', 1700)
+        width: 45px
+        height: 45px
+    &_mb
+      +screen('min', 700)
+        display: none
+  &__control
+    display: flex
+    justify-content: center
+    gap: 2rem
+    +screen('max', 700)
+      margin-top: 2rem
+      width: 100%
+  &__btn
+    padding: 1.7rem 3.3rem
+    +screen('max', 1700)
+      padding: 1.3rem 2.5rem
+    +screen('max', 1200)
+      +fs(12px)
+      padding: 1.2rem 1.5rem
+    +screen('max', 1000)
+      +fs(14px)
+    +screen('max', 700)
+      +fs(10px)
+      flex-grow: 1
+    svg
+      +screen('max', 700)
+        width: 20px
+        height: 20px
+  &__info
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    gap: 4rem
+    +screen('max', 1000)
+      gap: 3rem
+  &__mail
+    +fs(24px)
+    +screen('max', 1700)
+      +fs(18px)
+    +screen('max', 1000)
+      +fs(18px)
+    +screen('max', 700)
+      display: none
+  &__social
+    display: flex
+    justify-content: flex-end
+    gap: 1.4rem
+    +screen('max', 1700)
+      gap: 1rem
+    +screen('max', 700)
+      position: absolute
+      right: 0
+      top: 2rem
+      flex-flow: column
+  &__soc
+    svg
+      +screen('max', 1700)
+        width: 54px
+        height: 54px
+      +screen('max', 1000)
+        width: 45px
+        height: 45px
