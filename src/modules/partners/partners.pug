@@ -1,0 +1,18 @@
++b.partners
+  +e.top.swiper
+    .swiper-wrapper
+      -for(var i = 1; i < 7; i++){
+        .swiper-slide
+          +e.box
+            +e.IMG.pic(src='/icon/partners-' + i + '.svg' alt='')
+      -}
+      .swiper-slide
+        +e.box
+          +e.IMG.pic(src='/icon/partners-1.svg' alt='')
+  +e.bottom.swiper
+    .swiper-wrapper
+      -for(var i = 6; i < 14; i++){
+        .swiper-slide
+          +e.box
+            +e.IMG.pic(src='/icon/partners-' + i + '.svg' alt='')
+      -}

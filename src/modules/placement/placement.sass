@@ -1,0 +1,146 @@
+.placement
+  margin: 17rem 0 10rem
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 4rem
+  &__title
+    font-weight: 500
+    text-transform: uppercase
+    +fs(30px)
+  &__control
+    display: flex
+    justify-content: flex-end
+    gap: 3rem
+  &__sort
+    +fs(18px)
+    padding: 1.9rem 2rem
+  &__sort-map
+    border: 1px solid #838c95
+    border-radius: 8px
+    padding: 0.5rem 0.7rem
+    box-sizing: border-box
+    display: flex
+    align-items: center
+  &__tab
+    padding: 1.8rem
+    display: flex
+    align-items: center
+    gap: 1rem
+    +fs(18px)
+    font-weight: 500
+    text-transform: uppercase
+    color: #838c95
+    transition: .5s ease
+    border-radius: 5px
+    path
+      transition: .5s ease
+    &.active
+      background: var(--primary)
+      color: var(--primary-invers)
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05)
+      path
+        fill: var(--primary-invers)
+  &__plane
+    position: relative
+  &__pic
+    width: 100%
+    vertical-align: middle
+
+.placement-nav
+  position: absolute
+  top: 2.8rem
+  left: 50%
+  transform: translateX(-50%)
+  padding: 0.4rem
+  box-shadow: 0 -1px 20px 0 rgba(0, 0, 0, 0.06), 0 1px 7px 0 rgba(0, 0, 0, 0.07)
+  background: var(--primary-invers)
+  display: flex
+  border-radius: 8px
+  &__tab
+    +fs(18px)
+    font-weight: 500
+    text-transform: uppercase
+    color: #838c95
+    transition: .5s ease
+    border-radius: 5px
+    padding: 1.9rem 2rem 1.7rem
+    cursor: pointer
+    &.active
+      background: var(--primary)
+      color: var(--primary-invers)
+
+.placement-sort
+  position: absolute
+  bottom: 3rem
+  left: 50%
+  transform: translateX(-50%)
+  padding: 0.4rem
+  box-shadow: 0 -1px 20px 0 rgba(0, 0, 0, 0.06), 0 1px 7px 0 rgba(0, 0, 0, 0.07)
+  background: var(--primary-invers)
+  display: flex
+  border-radius: 8px
+  gap: .4rem
+  &__hidden
+    display: none
+    &:checked + .placement-sort__txt
+      background: var(--primary)
+      color: var(--primary-invers)
+  &__txt
+    +fs(20px)
+    font-weight: 500
+    text-transform: uppercase
+    color: #838c95
+    transition: .5s ease
+    border-radius: 5px
+    padding: 1.9rem 2rem 1.7rem
+    cursor: pointer
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05)
+    background: rgba(131, 140, 149, 0.3)
+    display: block
+
+.placement-infro
+  position: absolute
+  bottom: 3rem
+  left: 5rem
+  padding: 2rem
+  box-sizing: border-box
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05)
+  background: var(--primary)
+  border-radius: 8px
+  cursor: pointer
+  &__hidden
+    display: none
+    &:checked + .placement-infro__txt
+      &:after
+        left: 20px
+        opacity: 1
+  &__txt
+    font-weight: 500
+    +fs(16px)
+    text-transform: uppercase
+    color: var(--primary-invers)
+    padding-left: 55px
+    position: relative
+    &:before
+      content: ''
+      border-radius: 1333px
+      width: 41px
+      height: 24px
+      background: #fff
+      opacity: 0.2
+      position: absolute
+      left: 0
+      top: 0
+    &:after
+      content: ''
+      border-radius: 1333px
+      width: 18px
+      height: 18px
+      background: #fff
+      opacity: 0.4
+      position: absolute
+      top: 3px
+      left: 3px
+      transition: .5s ease

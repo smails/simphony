@@ -1,0 +1,107 @@
+.motion
+  margin: 10rem 0
+  padding: 11rem 0 9.5rem
+  background: #eeeff0
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 3.5rem
+  &__title
+    font-weight: 500
+    text-transform: uppercase
+    +fs(30px)
+  &__control
+    display: flex
+    gap: 3.5rem
+  &__btn
+    display: flex
+    justify-content: center
+    align-items: center
+  &__pic
+    width: 100%
+    object-fit: cover
+  &__select
+    position: relative
+    flex-grow: 1
+    &[open]
+      .modal-work__txt:before
+        transform: translateY(-50%) rotate(180deg)
+  &__txt
+    padding: 2rem
+    box-sizing: border-box
+    border: 1px solid var(--primary)
+    border-radius: 11px
+    background: none
+    +fs(20px)
+    line-height: 110%
+    position: relative
+    cursor: pointer
+    width: 312px
+    +screen('max', 600)
+      +fs(14px)
+      padding: 2rem 1.5rem
+    &:before
+      content: ''
+      width: 12px
+      height: 5px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' fill='none'%3E%3Cpath stroke='%230E302A' stroke-linecap='round' stroke-width='1.5' d='m1 1.3335 6 5.33333 6-5.33333'/%3E%3C/svg%3E")
+      background-position: center
+      background-size: contain
+      background-repeat: no-repeat
+      position: absolute
+      right: 1.5rem
+      top: 50%
+      transform: translateY(-50%)
+      transition: .5s ease
+  &__list
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    margin-top: 7px
+    border-radius: 15px
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.09)
+    background: var(--white)
+    border: 1px solid var(--primary)
+    padding: .8rem 1.5rem
+    z-index: 1
+    list-style: none
+    box-sizing: border-box
+    li
+      line-height: 1
+      transition: .5s ease
+      padding-block: 1.2rem
+      margin-bottom: 0
+  &__selection
+    display: flex
+    align-items: center
+    gap: 2.8rem
+  &__sign
+    +fs(18px)
+    opacity: 0.6
+  &__box
+    border: 1.33px solid rgba(0, 0, 0, 0.06)
+    border-radius: 8px
+    background: var(--primary-invers)
+    box-sizing: border-box
+    padding: 0.5rem
+  &__info
+    padding: 2.7rem 2.2rem
+    box-sizing: border-box
+  &__caption
+    +fs(34px)
+    font-weight: 500
+    line-height: 1.1
+    margin-bottom: 1rem
+  &__count
+    +fs(18px)
+    background: #f8f9f9
+    color: var(--text)
+    opacity: 0.5
+    padding: 0.9rem 1.5rem
+    box-sizing: border-box
+    border-radius: 100px
+    display: inline-block
+  .swiper-wrapper
+    gap: 0

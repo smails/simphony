@@ -1,0 +1,43 @@
+.project
+  margin: 9rem 0
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 3.5rem
+  &__title
+    font-weight: 500
+    text-transform: uppercase
+    +fs(30px)
+  &__caption
+    +fs(34px)
+    font-weight: 500
+    line-height: 1.1
+    margin-top: 3.5rem
+  &__pic
+    max-width: 100%
+    vertical-align: middle
+    object-fit: cover
+  &__picture
+    position: relative
+    display: block
+    &:after
+      content: ''
+      width: 73px
+      height: 73px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='19' fill='none'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M1.54492 9.16334H21.454m0 0-7.3924-7.96363m7.3924 7.96363L14.0616 17.127'/%3E%3C/svg%3E")
+      background-color: var(--secondary)
+      background-position: center
+      background-repeat: no-repeat
+      border-radius: 8px
+      position: absolute
+      bottom: 2.7rem
+      right: 2.7rem
+      transition: .5s ease
+      opacity: 0
+      visibility: hidden
+  &__box
+    &:hover
+      .project__picture::after
+        opacity: 1
+        visibility: visible
