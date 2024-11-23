@@ -1,6 +1,8 @@
 .banner
   box-sizing: border-box
   padding-inline: .8rem
+  +screen('max', 1023)
+    padding-inline: .5rem
   &__inner
     max-width: 1920px
     margin: 0 auto
@@ -9,11 +11,39 @@
   &__pic
     width: 100%
     border-radius: 8px
+    object-fit: cover
+    +screen('max', 1200)
+      height: 707px
+    +screen('max', 1023)
+      height: 95vh
+      max-height: 978px
+      min-height: 707px
+    +screen('max', 700)
+      height: 440px
+      min-height: auto
+      margin-top: 2rem
   &__content
     position: absolute
     top: 7rem
     left: 4rem
     color: var(--primary-invers)
+    +screen('max', 1500)
+      top: 5rem
+      left: 3rem
+    +screen('max', 1200)
+      top: 4rem
+      left: 2.5rem
+      width: 75%
+    +screen('max', 1023)
+      width: 100%
+    +screen('max', 700)
+      position: relative
+      left: 0
+      top: 0
+      color: var(--primary)
+      border-top: 1px solid var(--primary)
+      padding-top: 2rem
+      margin: 2rem 1rem 0
   &__sign
     padding: 0.9rem 1.6rem
     background: var(--secondary)
@@ -23,18 +53,43 @@
     font-weight: 500
     margin-bottom: 3rem
     display: inline-block
+    +screen('max', 1500)
+      +fs(12px)
+    +screen('max', 700)
+      +fs(10px)
+      +screen('max', 700)
+        margin-bottom: 1.5rem
   &__title
     margin-bottom: 1.7rem
     max-width: 1055px
+    +screen('max', 700)
+      +fs(26px)
+      margin-bottom: 1.3rem
   &__txt
     +fs(24px)
     line-height: 1.4
     max-width: 700px
     margin-bottom: 4rem
+    +screen('max', 1500)
+      +fs(18px)
+      margin-bottom: 3rem
+    +screen('max', 700)
+      +fs(14px)
   &__btn
     width: 296px
+    +screen('max', 1200)
+      width: 222px
+    +screen('max', 700)
+      width: calc(100% - 2rem)
+  .swiper-slide
+    +screen('max', 700)
+      display: flex
+      flex-flow: column-reverse
   .slider-arrows
     position: absolute
     bottom: 4.5rem
     right: 4.5rem
     z-index: 2
+    +screen('max', 1023)
+      right: 1.5rem
+      bottom: 1.5rem

@@ -6,39 +6,90 @@
     box-sizing: border-box
     display: flex
     justify-content: space-between
-    align-items: flex-end
+    align-items: center
     gap: 2rem
+    +screen('max', 1500)
+      padding: 4rem 5rem
+    +screen('max', 1200)
+      padding: 3rem 4rem
+    +screen('max', 1023)
+      flex-flow: column
+      padding: 4.5rem 3rem
+      align-items: flex-start
+    +screen('max', 700)
+      padding: 2.5rem 2rem
     &_orange
       background: var(--secondary)
   &__content
     max-width: 796px
     color: var(--primary-invers)
+    +screen('max', 1500)
+      max-width: 600px
+    +screen('max', 1200)
+      max-width: 543px
+    +screen('max', 1023)
+      max-width: 100%
   &__title
     +fs(56px)
     line-height: 1.1
     letter-spacing: -0.01em
     margin-bottom: 3.5rem
+    +screen('max', 1500)
+      +fs(42px)
+    +screen('max', 1200)
+      +fs(36px)
+      margin-bottom: 2rem
+    +screen('max', 700)
+      +fs(24px)
   &__sign
     opacity: 0.7
     +fs(24px)
     line-height: 120%
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 1200)
+      text-wrap: balance
   &__action
     max-width: 761px
     display: flex
     flex-wrap: wrap
     gap: 2.5rem
     align-items: flex-end
+    +screen('max', 1500)
+      width: 50%
+      gap: 1.8rem
+    +screen('max', 1023)
+      width: 100%
   &__group
     width: 50%
+    +screen('max', 1200)
+      width: 100%
+    +screen('max', 1023)
+      width: 50%
+    +screen('max', 700)
+      width: 100%
   &__submit
     width: 45%
     padding: 2.85rem 2rem
     +fs(18px)
+    +screen('max', 1500)
+      +fs(16px)
+      padding: 2.55rem 2.5rem
+    +screen('max', 1200)
+      width: 100%
+    +screen('max', 1023)
+      width: 45%
+      padding: 2.25rem 2.5rem
+    +screen('max', 700)
+      +fs(12px)
+      width: 100%
   &__name
     +fs(18px)
     line-height: 1.2
     margin-bottom: 1.2rem
     color: var(--primary-invers)
+    +screen('max', 1500)
+      +fs(14px)
   &__field
     border: 1.33px solid var(--primary-invers)
     border-radius: 8px
@@ -48,12 +99,18 @@
     color: var(--primary)
     width: 100%
     line-height: 1
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 1023)
+      padding: 1.8rem 2rem
     &::placeholder
       opacity: 0.6
   &__req
     flex-grow: 1
     +fs(16px)
     color: rgba(255, 255, 255, 0.5)
+    +screen('max', 1500)
+      +fs(12px)
     a
       font-weight: 500
       color: var(--primary-invers)

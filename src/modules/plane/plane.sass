@@ -4,6 +4,8 @@
     box-sizing: border-box
     max-width: 1920px
     margin: 0 auto
+    +screen('max', 1023)
+      padding-inline: .5rem
   &__title
     font-size: 15.95vw
     position: relative
@@ -11,6 +13,15 @@
     margin-bottom: -15rem
     +screen('min', 1921)
       +fs(307px)
+    +screen('max', 1500)
+      margin-bottom: -10rem
+    +screen('max', 1200)
+      margin-bottom: -8rem
+    +screen('max', 1023)
+      margin-bottom: -6rem
+      left: -8px
+    +screen('max', 700)
+      margin-bottom: -3rem
   &__sort
     padding: 6rem 4rem
     box-sizing: border-box
@@ -19,31 +30,79 @@
     border-top: 3px solid var(--primary-invers)
     position: relative
     z-index: 2
+    +screen('max', 1500)
+      padding: 4.5rem 3rem
+    +screen('max', 1200)
+      padding: 3rem 2rem
+    +screen('max', 1023)
+      padding: 3rem 2.5rem
+    +screen('max', 700)
+      padding: 2rem 1.5rem
   &__holder
     +fs(30px)
     text-transform: uppercase
     color: var(--primary-invers)
     margin-bottom: 4rem
+    +screen('max', 1500)
+      +fs(22px)
+    +screen('max', 1200)
+      margin-bottom: 3rem
+    +screen('max', 1023)
+      margin-bottom: 2.5rem
   &__checks
     display: flex
     gap: 2rem 4rem
     flex-wrap: wrap
+    +screen('max', 1500)
+      gap: 2rem 3rem
+    +screen('max', 700)
+      gap: 2rem
+      overflow: auto
+      flex-wrap: nowrap
+    .check
+      +screen('max', 700)
+        flex-shrink: 0
   &__box
     background: var(--primary)
     padding: 7rem 4.4rem
     box-sizing: border-box
     margin-top: -5px
+    +screen('max', 1500)
+      padding: 5rem 3rem
+    +screen('max', 1200)
+      padding: 2.5rem 2rem
+    +screen('max', 1023)
+      padding: 1.5rem
   &__row
     display: flex
     gap: 6rem
+    +screen('max', 1500)
+      gap: 5rem
+    +screen('max', 1200)
+      gap: 4rem
+      flex-flow: column
+    +screen('max', 1023)
+      gap: 1.5rem
   &__nav
     flex-shrink: 0
     max-width: 391px
-    width: 30%
+    width: 22%
     border-radius: 11px
     padding: 1.3rem
     background: var(--primary-invers)
     box-sizing: border-box
+    +screen('max', 1500)
+      padding: 1rem
+    +screen('max', 1200)
+      width: 100%
+      display: flex
+      max-width: 100%
+      gap: 1.5rem
+      padding: 0.3rem
+    +screen('max', 1023)
+      gap: 0
+    +screen('max', 700)
+      overflow: auto
   &__btn
     display: flex
     justify-content: space-between
@@ -55,11 +114,36 @@
     border-bottom: 1px solid rgba(149, 149, 149, 0.3)
     transition: .5s ease
     width: 100%
+    +screen('max', 1500)
+      +fs(14px)
+      padding: 3.2rem 2rem
+    +screen('max', 1200)
+      +fs(18px)
+      padding: 1.9rem 1rem
+      width: auto
+      border-bottom: 0
+    +screen('max', 1023)
+      +fs(14px)
+    +screen('max', 700)
+      flex-shrink: 0
     &:last-of-type
       border-bottom: 0
+    &[data-mobile]
+      font-size: 0
+      &:before
+        content: attr(data-mobile)
+        font-size: 18px
+        +screen('max', 1023)
+          font-size: 14px
     span
       opacity: .5
       font-weight: 400
+      +screen('max', 1200)
+        font-size: 18px
+        display: inline-block
+        margin-left: 1rem
+      +screen('max', 1023)
+        font-size: 14px
     &.active
       background: var(--secondary)
       color: var(--primary-invers)
@@ -87,6 +171,12 @@
     color: rgba(255, 255, 255, .5)
     cursor: pointer
     transition: .5s ease
+    +screen('max', 1500)
+      +fs(14px)
+    +screen('max', 1023)
+      +fs(18px)
+    +screen('max', 700)
+      +fs(14px)
     &.active
       color: var(--primary-invers)
       background: rgba(255, 255, 255, .2)
@@ -99,18 +189,43 @@
     margin-top: -5px
     padding: 2.7rem
     box-sizing: border-box
+    +screen('max', 1500)
+      padding: 2rem
+    +screen('max', 1023)
+      padding: 4rem
+    +screen('max', 700)
+      padding: 2rem 1.5rem
   &__req
     margin-top: 5.5rem
     margin-bottom: 10rem
     +fs(20px)
     color: rgba(255, 255, 255, 0.63)
     line-height: 1.2
+    +screen('max', 1500)
+      +fs(14px)
+    +screen('max', 1023)
+      margin-top: 3rem
+      margin-bottom: 5rem
 
 .plane-item
   display: flex
-  gap: min(7rem, 5vw)
+  gap: min(7rem, 4vw)
+  +screen('max', 1023)
+    flex-flow: column-reverse
+    position: relative
+    padding-bottom: 7rem
+  +screen('max', 700)
+    padding-bottom: 15rem
   &__picture
     position: relative
+    max-width: 512px
+    width: 40%
+    background: rgba(0, 0, 0, 0.05)
+    border-radius: 8px
+    +screen('max', 1023)
+      width: 100%
+      max-width: 100%
+      height: 390px
   &__nav
     position: absolute
     top: 2.7rem
@@ -124,14 +239,19 @@
     opacity: 0.5
     transition: .5s ease
     cursor: pointer
+    +screen('max', 1500)
+      +fs(14px)
     &.active
       text-decoration: underline
       text-decoration-skip-ink: none
       opacity: 1
   &__pic
     display: none
-    max-width: 512px
     vertical-align: middle
+    width: 100%
+    object-fit: contain
+    +screen('max', 1023)
+      height: 100%
     &:first-of-type
       display: block
   &__content
@@ -139,14 +259,25 @@
     padding-block: 4rem 8.5rem
     box-sizing: border-box
     flex-grow: 1
+    +screen('max', 1500)
+      padding-block: 3rem 6rem
+    +screen('max', 1023)
+      position: initial
+      padding: 0
   &__title
     line-height: 110%
     letter-spacing: -0.01em
     +fs(56px)
     margin-bottom: 1.5rem
+    +screen('max', 1500)
+      +fs(42px)
+    +screen('max', 700)
+      +fs(24px)
   &__squere
     color: rgba(#23262b, .5)
     +fs(20px)
+    +screen('max', 1500)
+      +fs(16px)
     span
       color: var(--text)
   &__set
@@ -155,11 +286,23 @@
     gap: 2rem
     margin-top: 5.5rem
     max-width: 585px
+    +screen('max', 1500)
+      margin-top: 4rem
+      gap: 1.5rem
+    +screen('max', 700)
+      margin-top: 3rem
+  &__icon
+    +screen('max', 1500)
+      width: 20px
   &__item
     display: flex
     align-items: center
     gap: 1.2rem
     +fs(20px)
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      +fs(14px)
   &__control
     position: absolute
     bottom: 0
@@ -167,6 +310,10 @@
     display: flex
     gap: 2rem
     width: 100%
+    +screen('max', 1500)
+      gap: 1.5rem
+    +screen('max', 700)
+      flex-flow: column
   &__btn
     flex-grow: 1
     width: 50%
@@ -174,3 +321,20 @@
     justify-content: center
     align-items: center
     height: 73px
+    +screen('max', 1500)
+      height: 55px
+      width: 45%
+    +screen('max', 700)
+      width: 100%
+  &__more
+    flex-grow: 1
+    width: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 73px
+    +screen('max', 1500)
+      height: 55px
+      width: 55%
+    +screen('max', 700)
+      width: 100%

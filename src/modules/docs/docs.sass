@@ -1,0 +1,123 @@
+.docs
+  margin: 10rem 0
+  padding-inline: .8rem
+  +screen('max', 1023)
+    padding-inline: .5rem
+  +screen('max', 700)
+    margin: 5rem 0
+  &__inner
+    padding: 1px
+    box-sizing: border-box
+    background: var(--primary)
+    border-radius: 8px
+    display: flex
+    justify-content: space-between
+    gap: 2rem
+    +screen('max', 1200)
+      display: block
+  &__left
+    padding: 9rem 4.5rem
+    box-sizing: border-box
+    +screen('max', 1200)
+      padding: 4rem
+      display: flex
+      justify-content: space-between
+      align-items: center
+    +screen('max', 1023)
+      padding: 3.5rem 3rem
+    +screen('max', 700)
+      display: block
+      padding: 3.5rem 1.5rem
+  &__title
+    +fs(29px)
+    text-transform: uppercase
+    color: var(--primary-invers)
+    margin-bottom: 5.5rem
+    +screen('max', 1500)
+      +fs(22px)
+    +screen('max', 1200)
+      margin-bottom: 0
+  &__btn
+    color: var(--primary-invers)
+    border-color: var(--primary-invers)
+    +screen('max', 700)
+      width: 100%
+      margin-top: 3rem
+  &__right
+    border-radius: 8px
+    background: var(--primary-invers)
+    max-width: 1250px
+    padding: 9rem 4rem 0 5rem
+    box-sizing: border-box
+    display: flex
+    gap: 6rem
+    width: 68%
+    +screen('max', 1500)
+      padding: 5rem 3rem 0 4rem
+    +screen('max', 1200)
+      width: 100%
+    +screen('max', 1023)
+      padding: 4rem 2rem 0 3rem
+      gap: 2rem
+    +screen('max', 700)
+      display: block
+    +screen('max', 700)
+      padding: 3rem 1rem 0 2rem
+  &__box
+    height: 32.5vw
+    max-height: 624px
+    overflow: auto
+    width: 50%
+    +screen('max', 1023)
+      height: 60vw
+    +screen('max', 700)
+      width: 100%
+    &::-webkit-scrollbar
+      width: 4px
+      border-radius: 20px
+    &::-webkit-scrollbar-track
+      background:  #bdc0ca
+      width: 1px
+    &::-webkit-scrollbar-thumb
+      background-color: var(--secondary)
+      width: 2px
+  &__caption
+    +fs(20px)
+    font-weight: 500
+    text-transform: uppercase
+    margin-bottom: 2.7rem
+    +screen('max', 1500)
+      +fs(16px)
+  &__list
+    counter-reset: inc 0
+    margin-right: 5rem
+    border-bottom: 1px solid #bdc0ca
+    margin-bottom: 4rem
+    +screen('max', 1500)
+      margin-bottom: 2rem
+    &:last-of-type
+      border-bottom: 0
+      margin-bottom: 0
+  &__item
+    position: relative
+    padding-left: 4rem
+    padding-bottom: 4rem
+    +screen('max', 1500)
+      padding-bottom: 2rem
+    +fs(20px)
+    line-height: 120%
+    +screen('max', 1500)
+      +fs(16px)
+    &:before
+      counter-increment: inc
+      content: '(0' counter(inc) ')'
+      position: absolute
+      top: 0
+      left: 0
+      opacity: 0.3
+      font-size: 16px
+    p
+      margin-bottom: 1rem
+    span
+      display: block
+      color: #838c95

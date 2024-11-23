@@ -1,14 +1,26 @@
 .news-index
   margin: 9rem 0
+  +screen('max', 1200)
+    margin: 6rem 0
+  +screen('max', 700)
+    margin: 4rem 0
+    padding-bottom: 9rem
+    position: relative
   &__head
     display: flex
     justify-content: space-between
     align-items: center
     margin-bottom: 3.5rem
+    +screen('max', 700)
+      margin-bottom: 2rem
   &__title
     font-weight: 500
     text-transform: uppercase
     +fs(30px)
+    +screen('max', 1500)
+      +fs(22px)
+    +screen('max', 700)
+      +fs(16px)
   &__control
     display: flex
     gap: 3.5rem
@@ -16,6 +28,11 @@
     display: flex
     justify-content: center
     align-items: center
+    +screen('max', 700)
+      position: absolute
+      bottom: 2rem
+      left: 1.5rem
+      width: calc( 100% - 3rem )
   &__pic
     width: 100%
     object-fit: cover
@@ -30,6 +47,11 @@
     z-index: 2
     background: #f8f9f9
     opacity: 0.7
+    +screen('max', 1500)
+      margin-top: 2.5rem
+      margin-bottom: 1.6rem
+      +fs(14px)
+      padding: 0.6rem 1rem
   &__caption
     font-weight: 500
     +fs(26px)
@@ -39,5 +61,15 @@
     -webkit-line-clamp: 2
     line-clamp: 2
     -webkit-box-orient: vertical
+    +screen('max', 1500)
+      +fs(20px)
+  &__wrapper
+    +screen('max', 1023)
+      width: calc(100% + 2rem)
+    +screen('max', 700)
+      width: calc(100% + 1.5rem)
   .swiper-wrapper
     gap: 0
+  .slider-btn
+    +screen('max', 700)
+      display: none

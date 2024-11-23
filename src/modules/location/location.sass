@@ -2,13 +2,30 @@
   margin: 14rem auto
   position: relative
   max-width: 1920px
+  +screen('max', 1500)
+    margin: 10rem 0
+  +screen('max', 1200)
+    margin: 8rem 0
+  +screen('max', 700)
+    margin: 5.5rem 0
   &__head
     position: relative
     margin-bottom: 5.6rem
+    +screen('max', 1200)
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 4rem
+    +screen('max', 700)
+      flex-flow: column
+      align-items: flex-start
+      gap: 2.4rem
   &__title
     font-weight: 500
     text-transform: uppercase
     +fs(30px)
+    +screen('max', 1500)
+      +fs(24px)
   &__tabs
     border-radius: 8px
     background: #f4f4f4
@@ -18,6 +35,12 @@
     top: 0
     left: 50%
     transform: translateX(-50%)
+    +screen('max', 1200)
+      position: relative
+      transform: none
+      left: 0
+    +screen('max', 700)
+      width: 100%
   &__btn
     border-radius: 5px
     color: #838c95
@@ -26,12 +49,20 @@
     text-transform: uppercase
     font-weight: 500
     line-height: 1
+    +screen('max', 1500)
+      +fs(12px)
+    +screen('max', 700)
+      width: 48%
     &.active
       box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05)
       background: #fff
       color: var(--text)
   &__body
     margin-left: 5rem
+    +screen('max', 1500)
+      margin-left: 3rem
+    +screen('max', 1200)
+      margin-left: 2rem
   &__box
     display: none
     &:first-of-type
@@ -40,13 +71,32 @@
     +fs(34px)
     font-weight: 500
     margin: 3.5rem 0 2rem
+    +screen('max', 1500)
+      +fs(26px)
+      margin: 2.5rem 0 2rem
+    +screen('max', 700)
+      +fs(20px)
   &__txt
     +fs(24px)
     line-height: 1.3
     opacity: .8
+    +screen('max', 1500)
+      +fs(18px)
+    +screen('max', 700)
+      +fs(14px)
+  &__pic
+    max-width: 100%
   .swiper-slide
     max-width: 594px
+    +screen('max', 1200)
+      max-width: 395px
+    +screen('max', 700)
+      max-width: 330px
   .slider-btn
     position: absolute
     right: 5rem
     top: -5px
+    +screen('max', 1500)
+      right: 3rem
+    +screen('max', 1200)
+      display: none

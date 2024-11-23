@@ -1,19 +1,34 @@
 .motion
-  margin: 10rem 0
+  margin-top: 10rem
   padding: 11rem 0 9.5rem
   background: #eeeff0
+  +screen('max', 1200)
+    padding: 6rem 0 5.5rem
+  +screen('max', 700)
+    padding: 4rem 0
   &__head
     display: flex
     justify-content: space-between
     align-items: center
     margin-bottom: 3.5rem
+    +screen('max', 700)
+      margin-bottom: 2.5rem
+      flex-flow: column
+      align-items: flex-start
+      gap: 2rem
   &__title
     font-weight: 500
     text-transform: uppercase
     +fs(30px)
+    +screen('max', 1500)
+      +fs(22px)
+    +screen('max', 700)
+      +fs(16px)
   &__control
     display: flex
     gap: 3.5rem
+    +screen('max', 700)
+      width: 100%
   &__btn
     display: flex
     justify-content: center
@@ -24,6 +39,8 @@
   &__select
     position: relative
     flex-grow: 1
+    +screen('max', 700)
+      width: 100%
     &[open]
       .modal-work__txt:before
         transform: translateY(-50%) rotate(180deg)
@@ -38,9 +55,15 @@
     position: relative
     cursor: pointer
     width: 312px
+    +screen('max', 1500)
+      +fs(16px)
+      padding: 1.8rem 1.5rem
+    +screen('max', 1023)
+      width: 234px
     +screen('max', 600)
       +fs(14px)
       padding: 2rem 1.5rem
+      width: 100%
     &:before
       content: ''
       width: 12px
@@ -65,9 +88,10 @@
     background: var(--white)
     border: 1px solid var(--primary)
     padding: .8rem 1.5rem
-    z-index: 1
+    z-index: 2
     list-style: none
     box-sizing: border-box
+    background: var(--primary-invers)
     li
       line-height: 1
       transition: .5s ease
@@ -77,9 +101,17 @@
     display: flex
     align-items: center
     gap: 2.8rem
+    +screen('max', 700)
+      flex-flow: column
+      gap: 1rem
+      align-items: flex-start
+      width: 100%
+      flex-grow: 1
   &__sign
     +fs(18px)
     opacity: 0.6
+    +screen('max', 1500)
+      +fs(14px)
   &__box
     border: 1.33px solid rgba(0, 0, 0, 0.06)
     border-radius: 8px
@@ -89,11 +121,19 @@
   &__info
     padding: 2.7rem 2.2rem
     box-sizing: border-box
+    +screen('max', 1500)
+      padding: 2rem
+    +screen('max', 700)
+      padding: 2rem 1.5rem
   &__caption
     +fs(34px)
     font-weight: 500
     line-height: 1.1
     margin-bottom: 1rem
+    +screen('max', 1500)
+      +fs(26px)
+    +screen('max', 700)
+      +fs(20px)
   &__count
     +fs(18px)
     background: #f8f9f9
@@ -103,5 +143,16 @@
     box-sizing: border-box
     border-radius: 100px
     display: inline-block
+    +screen('max', 1500)
+      +fs(14px)
+      padding: 0.6rem 1rem
+  &__wrapper
+    +screen('max', 1023)
+      width: calc(100% + 2rem)
+    +screen('max', 700)
+      width: calc(100% + 1.5rem)
   .swiper-wrapper
     gap: 0
+  .slider-arrows
+    +screen('max', 1023)
+      display: none

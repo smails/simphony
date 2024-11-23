@@ -1,8 +1,14 @@
 .room
   margin: 11rem 0
+  +screen('max', 1023)
+    margin: 7rem 0
   &__wrap
     display: flex
     gap: 2rem
+    +screen('max', 1200)
+      gap: 1.5rem
+    +screen('max', 1023)
+      flex-flow: column-reverse
   &__wrapper
     position: relative
   &__pic
@@ -10,12 +16,25 @@
     max-width: 901px
     vertical-align: middle
     flex-shrink: 0
+    object-fit: cover
+    border-radius: 8px
+    +screen('max', 1023)
+      width: 100%
+      height: 390px
+    +screen('max', 700)
+      height: 233px
   &__content
     border: 1px solid var(--text)
     border-radius: 8px
     padding: 5rem 4rem
     box-sizing: border-box
     position: relative
+    +screen('max', 1500)
+      padding: 3.5rem 2.5rem
+    +screen('max', 1200)
+      padding: 2.5rem
+    +screen('max', 700)
+      padding: 1.5rem
   &__sign
     border-radius: 133px
     padding: 1.7rem 2.6rem 1.4rem 2.6rem
@@ -26,8 +45,23 @@
     text-transform: uppercase
     margin-bottom: 5rem
     display: inline-block
+    +screen('max', 1500)
+      +fs(13px)
+      margin-bottom: 4rem
+      padding: 1.3rem 2rem
+    +screen('max', 700)
+      +fs(10px)
+      margin-bottom: 2rem
   &__title
     +fs(80px)
+    +screen('max', 1500)
+      +fs(60px)
+    +screen('max', 1200)
+      +fs(42px)
+    +screen('max', 1023)
+      +fs(60px)
+    +screen('max', 700)
+      +fs(30px)
   &__txt
     margin-top: 6rem
     padding-top: 4rem
@@ -36,6 +70,18 @@
     +fs(20px)
     line-height: 1.2
     text-wrap: balance
+    +screen('max', 1500)
+      +fs(14px)
+    +screen('max', 1200)
+      margin-top: 4rem
+      padding-top: 3rem
+    +screen('max', 1023)
+      +fs(16px)
+    +screen('max', 700)
+      +fs(14px)
+      padding-top: 1.5rem
+      margin-top: 2rem
+      column-count: 1
     &:before
       content: ''
       width: calc( 100% + 8rem )
@@ -44,6 +90,9 @@
       left: -4rem
       background: var(--text)
       top: 0
+      +screen('max', 1500)
+        width: calc( 100% + 5rem )
+        left: -2.5rem
   &__control
     position: absolute
     bottom: 0
@@ -52,13 +101,36 @@
     box-sizing: border-box
     border-top: 1px solid var(--text)
     width: 100%
+    +screen('max', 1500)
+      padding: 4rem 2.5rem
+    +screen('max', 1200)
+      padding: 2.5rem
+    +screen('max', 1023)
+      position: relative
+      border-top: 0
+      padding: 0
+      margin-top: 7rem
+    +screen('max', 700)
+      margin-top: 2.5rem
+  &__btn
+    +screen('max', 1023)
+      width: 100%
   .swiper-wrapper
     gap: 0
+    +screen('max', 1023)
+      gap: 1rem
   .slider-btn
     position: absolute
     bottom: 5rem
     right: 4rem
     z-index: 2
+    +screen('max', 1500)
+      right: 2.5rem
+      bottom: 4rem
+    +screen('max', 1200)
+      bottom: 2.5rem
+    +screen('max', 1023)
+      display: none
   .slider-dots
     position: absolute
     top: 3rem
@@ -67,5 +139,12 @@
     text-transform: uppercase
     letter-spacing: -0.02em
     line-height: 1
+    +screen('max', 1500)
+      +fs(14px)
+      right: 6rem
+    +screen('max', 700)
+      right: 3rem
     span
       +fs(38px)
+      +screen('max', 1500)
+        +fs(32px)

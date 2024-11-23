@@ -1,6 +1,13 @@
 .about
   padding-block: 6rem 8rem
   position: relative
+  +screen('max', 1200)
+    padding-block: 5rem 8rem
+    overflow: hidden
+  +screen('max', 1023)
+    padding-block: 5rem
+  +screen('max', 700)
+    padding-block: 5rem 20rem
   &:before
     content: ''
     width: 189px
@@ -8,16 +15,34 @@
     background-image: url(../icon/note.svg)
     background-repeat: no-repeat
     background-position: center
+    background-size: contain
     position: absolute
     top: 2rem
     right: 0
+    +screen('max', 1500)
+      width: 160px
+    +screen('max', 1200)
+      width: 120px
+      top: -2rem
+      right: -30px
+    +screen('max', 1023)
+      top: -5rem
+    +screen('max', 700)
+      top: -7rem
   &__inner
     display: flex
     align-items: center
-    gap: min(11rem, 8vw)
+    gap: min(11rem, 6.7vw)
+    +screen('max', 1023)
+      flex-flow: column-reverse
+    +screen('max', 700)
+      gap: 2rem
   &__video
     position: relative
     flex-shrink: 0
+    +screen('max', 1023)
+      width: 100%
+      height: 310px
     &:after
       content: 'Видео о проекте'
       position: absolute
@@ -25,6 +50,18 @@
       left: 0
       +fs(21px)
       opacity: 0.4
+      +screen('max', 1500)
+        +fs(16px)
+  &__pic
+    object-fit: cover
+    border-radius: 8px
+    +screen('max', 1500)
+      width: 390px
+    +screen('max', 1200)
+      width: 257px
+    +screen('max', 1023)
+      width: 100%
+      height: 100%
   &__play
     position: absolute
     top: 50%
@@ -32,35 +69,85 @@
     transform: translate(-50%, -50%)
     z-index: 2
     border-radius: 8px
+    svg
+      +screen('max', 1700)
+        width: 73px
+        height: 73px
   &__title
     +fs(88px)
     line-height: 1.2
     letter-spacing: -0.02em
     margin-bottom: 2rem
     font-weight: 400
+    +screen('max', 1500)
+      +fs(66px)
+      margin-bottom: 1.3rem
+    +screen('max', 700)
+      +fs(36px)
   &__txt
     line-height: 1.2
     +fs(24px)
     opacity: 0.8
+    +screen('max', 1500)
+      +fs(18px)
   &__vnt
     display: flex
     flex-wrap: wrap
     gap: 6rem
     margin: 5rem 0
+    +screen('max', 1200)
+      margin: 3rem 0
+    +screen('max', 700)
+      gap: 3.5rem
   &__numb
     +fs(38px)
     line-height: 1
     font-weight: 500
     margin-bottom: .2rem
+    +screen('max', 1500)
+      +fs(28px)
   &__sign
     +fs(18px)
     color: #4d545a
+    +screen('max', 1500)
+      +fs(14px)
+    +screen('max', 700)
+      max-width: 168px
   &__control
     margin-top: 5rem
     display: flex
     gap: 2rem
+    +screen('max', 1200)
+      margin-top: 4rem
+    +screen('max', 700)
+      position: absolute
+      bottom: 0
+      flex-flow: column
+      margin-top: 0
+      gap: 1.4rem
+      width: 100%
   &__btn
     width: 320px
+    +screen('max', 1500)
+      width: 280px
+    +screen('max', 1200)
+      padding: 1.3rem 3rem
+    +screen('max', 1023)
+      width: 50%
+    +screen('max', 700)
+      width: calc(100% - 3rem)
+    svg
+      +screen('max', 1200)
+        width: 27px
+        height: 27px
   &__call
     line-height: 25px
     width: 320px
+    +screen('max', 1500)
+      width: 260px
+    +screen('max', 1200)
+      line-height: 13px
+    +screen('max', 1023)
+      width: 50%
+    +screen('max', 700)
+      width: calc(100% - 3rem)

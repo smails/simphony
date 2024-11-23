@@ -4,7 +4,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 $('.room__wrapper').each((index, item) => {
   const swiper = new Swiper($(item).find('.swiper')[0], {
-    slidesPerView: 1,
+    slidesPerView: 1.05,
     loop: true,
     navigation: {
       nextEl: $(item).find('.slider-btn__border_next')[0],
@@ -17,5 +17,10 @@ $('.room__wrapper').each((index, item) => {
       renderCustom: function (swiper, current, total) { return '<span>' + current + '</span>/' + total; }
     },
     modules: [Navigation, Pagination],
+    breakpoints: {
+      1200: {
+        slidesPerView: 1,
+      },
+    },
   });
 })

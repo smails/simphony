@@ -7,6 +7,8 @@ body
   color: var(--text)
 main
   padding-top: 117px
+  +screen('max', 1700)
+    padding-top: 101px
   +screen('max', 700)
     padding-top: 78px
 
@@ -17,7 +19,7 @@ main
   box-sizing: border-box
   max-width: 1920px
   +screen('max', 1500)
-    padding-inline: 4rem
+    padding-inline: 3rem
   +screen('max', 1300)
     padding-inline: 2rem
   +screen('max', 700)
@@ -42,6 +44,10 @@ main
   transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial)
   box-sizing: content-box
   gap: 2rem
+  +screen('max', 1500)
+    gap: 1.6rem
+  +screen('max', 1200)
+    gap: 1rem
 
 .swiper-slide
   flex-shrink: 0

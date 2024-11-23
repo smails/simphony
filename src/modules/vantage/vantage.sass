@@ -5,11 +5,18 @@
     box-sizing: border-box
     max-width: 1920px
     margin: 0 auto
+    +screen('max', 1023)
+      padding-inline: .5rem
   &__list
     display: grid
     grid-template-columns: repeat(4, 1fr)
     gap: .8rem
     counter-reset: inc 0
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 700)
+      overflow: auto
+      grid-template-columns: repeat(4, 237px)
   &__item
     border: 1.33px solid #d7dbe0
     border-radius: 8px
@@ -18,6 +25,10 @@
     position: relative
     overflow: hidden
     z-index: 2
+    +screen('max', 1500)
+      padding: 3rem 4rem
+    +screen('max', 1200)
+      padding: 1.5rem
     &:before
       counter-increment: inc
       content: '(0' counter(inc) ')'
@@ -26,6 +37,11 @@
       right: 2.5rem
       color: #838c95
       opacity: 0.7
+      +screen('max', 1500)
+        +fs(12px)
+      +screen('max', 1200)
+        top: 1rem
+        right: 1rem
     &:after
       content: ''
       width: 282px
@@ -37,10 +53,30 @@
       background: var(--secondary)
       opacity: 0.1
       z-index: -1
+      +screen('max', 1200)
+        left: -60%
+        top: 55%
+      +screen('max', 1023)
+        left: -25%
+        top: 55%
+        width: 212px
+        height: 212px
   &__icon
     margin-bottom: 5rem
+    +screen('max', 1500)
+      width: 65px
+      margin-bottom: 4rem
+    +screen('max', 1200)
+      width: 55px
+      margin-bottom: 3rem
+    +screen('max', 700)
+      width: 50px
   &__title
     +fs(24px)
     font-weight: 500
     text-transform: uppercase
     color: var(--primary)
+    +screen('max', 1500)
+      +fs(18px)
+    +screen('max', 700)
+      +fs(14px)

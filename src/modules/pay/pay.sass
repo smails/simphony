@@ -2,6 +2,12 @@
   background: var(--primary)
   padding-block: 9rem
   margin: 1rem
+  border-radius: 8px
+  +screen('max', 1500)
+    padding-block: 6rem
+  +screen('max', 1200)
+    margin: 0.6rem
+    padding-block: 4rem
   &__title
     font-size: 10.639vw
     position: relative
@@ -9,6 +15,13 @@
     color: var(--primary-invers)
     +screen('min', 1921)
       +fs(208px)
+    +screen('max', 1500)
+      font-size: 10.51vw
+    +screen('max', 1023)
+      margin-bottom: -7rem
+    +screen('max', 700)
+      font-size: 10.45vw
+      margin-bottom: -5rem
   &__list
     padding-inline: 4rem
     display: grid
@@ -17,6 +30,23 @@
     gap: 2rem
     counter-reset: inc 0
     box-sizing: border-box
+    +screen('max', 1500)
+      gap: 1.6rem
+      grid-auto-rows: 230px
+      padding-block: 4rem
+    +screen('max', 1200)
+      grid-auto-rows: 160px
+      padding-inline: 1.8rem
+      gap: 1rem
+      padding-inline: 3rem
+    +screen('max', 1023)
+      grid-template-columns: repeat(4, 330px)
+      overflow: auto
+      grid-auto-rows: 230px
+    +screen('max', 700)
+      grid-template-columns: repeat(8, 285px)
+      grid-auto-rows: 200px
+      padding-inline: 1.5rem
   &__item
     border: 1.33px solid var(--primary)
     border-radius: 8px
@@ -28,12 +58,21 @@
     display: flex
     flex-flow: column
     justify-content: space-between
+    +screen('max', 1500)
+      padding: 3rem 2rem
+    +screen('max', 1200)
+      padding: 2rem
     &:before
       counter-increment: inc
       content: '(0' counter(inc) ')'
       position: absolute
       top: 2.5rem
       right: 2.5rem
+      +screen('max', 1500)
+        +fs(12px)
+      +screen('max', 1200)
+        top: 1rem
+        right: 1rem
     &:after
       content: ''
       width: 73px
@@ -49,17 +88,54 @@
       transition: .5s ease
       opacity: 0
       visibility: hidden
+      +screen('max', 1500)
+        width: 55px
+        height: 55px
+        background-size: 17px
+        bottom: 2rem
+        right: 2rem
+      +screen('max', 700)
+        position: relative
+        opacity: 1
+        visibility: visible
+        bottom: 0
+        right: 0
+        width: 35px
+        height: 35px
+        background-size: 13px
     &:hover
       background: var(--primary)
       border-color: var(--primary-invers)
       color: var(--primary-invers)
-      path
-        fill: var(--primary-invers)
+      .stroke
         stroke: var(--primary-invers)
+      .fill
+        fill: var(--primary-invers)
+      &:after
+        opacity: 1
+        visibility: visible
   &__caption
     text-transform: uppercase
     +fs(24px)
     font-weight: 500
+    +screen('max', 1500)
+      +fs(18px)
+    +screen('max', 1200)
+      +fs(16px)
+    +screen('max', 1023)
+      +fs(18px)
   &__icon
+    +screen('max', 1500)
+      width: 85px
+      height: 85px
+    +screen('max', 1200)
+      width: 60px
+      height: 60px
+    +screen('max', 1023)
+      width: 85px
+      height: 85px
+    +screen('max', 700)
+      width: 60px
+      height: 60px
     path
       transition: .5s ease

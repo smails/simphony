@@ -14,13 +14,13 @@
         +e.nav
           +e.BUTTON.btn.active Студия 
             span (1 178)
-          +e.BUTTON.btn 1-комнатные
+          +e.BUTTON.btn(data-mobile="1-К") 1-комнатные
             span (576)
-          +e.BUTTON.btn 2-комнатные
+          +e.BUTTON.btn(data-mobile="2-К") 2-комнатные
             span (68)
-          +e.BUTTON.btn 3-комнатные
+          +e.BUTTON.btn(data-mobile="3-К") 3-комнатные
             span (3 446)
-          +e.BUTTON.btn 4-комнатные
+          +e.BUTTON.btn(data-mobile="4-К") 4-комнатные
             span (135)
           +e.BUTTON.btn Парковочное место
             span (360)
@@ -64,7 +64,7 @@
                             +e.IMG.icon(src='/icon/set-2.svg' alt='')
                             +e.SPAN.txt Двухуровневая  
                         +e.control
-                          +e.A.btn.btn_transparent(href="#") Все планировки этого типа
+                          +e.A.more.btn_transparent(href="#") Все планировки этого типа
                           +e.A.btn.btn_secondary(href="#") Оставить заявку
                   - }
           - }

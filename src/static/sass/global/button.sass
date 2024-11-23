@@ -15,6 +15,8 @@
   text-transform: uppercase
   +screen('max', 1700)
     +fs(14px)
+  +screen('max', 1500)
+    padding: 2rem 2.5rem
   &:hover
     color: var(--hover)
   &_secondary
@@ -26,7 +28,6 @@
     border-color: var(--primary)
     background: none
     color: var(--primary)
-    padding: 1.7rem 3rem
     &:hover
       background: var(--primary)
       color: var(--primary-invers)
@@ -35,6 +36,7 @@
   &_icon
     display: inline-flex
     align-items: center
+    justify-content: center
     gap: 1rem
     line-height: 1
     path
@@ -58,8 +60,19 @@
   background: var(--primary-invers)
   transition: .5s ese
   cursor: pointer
+  +screen('max', 1500)
+    width: 55px
+    height: 55px
+  +screen('max', 700)
+    width: 35px
+    height: 35px
   path
     transition: .5s ese
+  svg
+    +screen('max', 1500)
+      transform: scale(.8)
+    +screen('max', 700)
+      transform: scale(.6)
   &:hover
     background: var(--primary)
     path
@@ -79,7 +92,19 @@
     transition: .5s ese
     opacity: .3
     cursor: pointer
+    +screen('max', 1500)
+      width: 55px
+      height: 55px
+    +screen('max', 700)
+      width: 35px
+      height: 35px
     path
       transition: .5s ese
     &:hover
       opacity: 1
+  svg
+    +screen('max', 1500)
+      transform: scale(.8)
+    +screen('max', 700)
+      transform: scale(.6)
+      

@@ -5,6 +5,12 @@
   &__wrapper
     margin-top: -12rem
     position: relative
+    +screen('max', 1500)
+      margin-top: -9rem
+    +screen('max', 1200)
+      margin-top: -7rem
+    +screen('max', 700)
+      margin-top: -2rem
   &__pic
     width: 100%
     border-radius: 8px
@@ -26,6 +32,18 @@
     opacity: 0
     visibility: hidden
     transition: .5s ease
+    width: 50%
+    +screen('max', 1500)
+      padding: 2rem
+    +screen('max', 1200)
+      position: relative
+      bottom: 0
+      left: 0
+      background: none
+      width: 100%
+      padding: 3rem 0
+    +screen('max', 700)
+      padding-block: 2rem 0
   &__title
     font-size: 17vw
     +screen('min', 1921)
@@ -34,12 +52,22 @@
     font-weight: 500
     +fs(34px)
     margin-bottom: 2rem
+    +screen('max', 1500)
+      +fs(26px)
+    +screen('max', 1200)
+      margin-bottom: 1.6rem
   &__txt
     +fs(18px)
     line-height: 1.2
     opacity: 0.8
+    +screen('max', 1500)
+      +fs(14px)
   .swiper-slide
     max-width: 1707px
+    +screen('max', 1500)
+      width: 90vw
+    +screen('max', 1200)
+      width: 96vw
   .swiper-slide-active
     .arc__content
       opacity: 1
@@ -49,3 +77,5 @@
     bottom: 4rem
     right: 8vw
     z-index: 2
+    +screen('max', 1200)
+      display: none

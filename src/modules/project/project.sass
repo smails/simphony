@@ -1,5 +1,9 @@
 .project
   margin: 9rem 0
+  +screen('max', 1200)
+    margin: 8rem 0
+  +screen('max', 700)
+    margin: 5rem 0
   &__head
     display: flex
     justify-content: space-between
@@ -9,11 +13,19 @@
     font-weight: 500
     text-transform: uppercase
     +fs(30px)
+    +screen('max', 1500)
+      +fs(22px)
   &__caption
     +fs(34px)
     font-weight: 500
     line-height: 1.1
     margin-top: 3.5rem
+    +screen('max', 1500)
+      +fs(26px)
+      margin-top: 2.5rem
+    +screen('max', 700)
+      +fs(20px)
+      margin-top: 2rem
   &__pic
     max-width: 100%
     vertical-align: middle
@@ -21,6 +33,7 @@
   &__picture
     position: relative
     display: block
+    border-radius: 8px
     &:after
       content: ''
       width: 73px
@@ -36,8 +49,21 @@
       transition: .5s ease
       opacity: 0
       visibility: hidden
+      +screen('max', 1500)
+        width: 55px
+        height: 55px
   &__box
     &:hover
       .project__picture::after
         opacity: 1
         visibility: visible
+  &__wrapper
+    +screen('max', 1023)
+      width: calc(100% + 2rem)
+    +screen('max', 700)
+      width: calc(100% + 1.5rem)
+  .swiper-wrapper
+    gap: 0
+  .slider-btn
+    +screen('max', 1023)
+      display: none

@@ -2,15 +2,30 @@
   margin: 10rem 0
   padding: 11rem 0 9.5rem
   background: #eeeff0
+  +screen('max', 1500)
+    padding: 9rem 0 8rem
+    margin: 8rem 0
+  +screen('max', 1200)
+    padding: 6rem 0
+  +screen('max', 700)
+    padding: 3.5rem 0 9rem
+    position: relative
+    margin: 4rem 0
   &__head
     display: flex
     justify-content: space-between
     align-items: center
     margin-bottom: 3.5rem
+    +screen('max', 700)
+      margin-bottom: 2.5rem
   &__title
     font-weight: 500
     text-transform: uppercase
     +fs(30px)
+    +screen('max', 1500)
+      +fs(22px)
+    +screen('max', 700)
+      +fs(16px)
   &__control
     display: flex
     gap: 3.5rem
@@ -18,6 +33,11 @@
     display: flex
     justify-content: center
     align-items: center
+    +screen('max', 700)
+      position: absolute
+      bottom: 2rem
+      left: 1.5rem
+      width: calc( 100% - 3rem )
   &__pic
     width: 100%
     object-fit: cover
@@ -83,6 +103,11 @@
       +fs(18px)
     +screen('max', 700)
       +fs(14px)
+  &__wrapper
+    +screen('max', 1023)
+      width: calc(100% + 2rem)
+    +screen('max', 700)
+      width: calc(100% + 1.5rem)
   .swiper-slide
     background: var(--primary-invers)
     border-radius: 8px
@@ -100,3 +125,6 @@
       background: var(--secondary)
       opacity: 0.2
       z-index: -1
+  .slider-arrows
+    +screen('max', 1200)
+      display: none
