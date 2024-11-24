@@ -129,12 +129,14 @@
     &:last-of-type
       border-bottom: 0
     &[data-mobile]
-      font-size: 0
+      +screen('max', 700)
+        font-size: 0
       &:before
-        content: attr(data-mobile)
-        font-size: 18px
-        +screen('max', 1023)
-          font-size: 14px
+        +screen('max', 700)
+          content: attr(data-mobile)
+          font-size: 18px
+          +screen('max', 1023)
+            font-size: 14px
     span
       opacity: .5
       font-weight: 400

@@ -13,6 +13,14 @@
   +screen('max', 700)
     border-top-width: 3px
     padding-block: 1.5rem
+  &:before
+    content: ''
+    width: calc( 100% - 3rem )
+    height: 1px
+    left: 1.5rem
+    position: absolute
+    bottom: 0
+    background: var(--primary)
   &.open
     .header__list, .header__btn
       display: none

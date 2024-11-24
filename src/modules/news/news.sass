@@ -36,6 +36,7 @@
   &__pic
     width: 100%
     object-fit: cover
+    border-radius: 6px
   &__date
     padding: 0.85rem 1.2rem
     display: inline-block
@@ -73,3 +74,231 @@
   .slider-btn
     +screen('max', 700)
       display: none
+
+.news-list
+  &__title
+    font-weight: 500
+    text-transform: uppercase
+    margin-bottom: 6.5rem
+    +fs(30px)
+    +screen('max', 1500)
+      +fs(22px)
+      margin-bottom: 4rem
+    +screen('max', 1023)
+      margin-bottom: 3.5rem
+    +screen('max', 700)
+      +fs(16px)
+      margin-bottom: 3rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(4,1fr)
+    gap: 8rem 2rem
+    +screen('max', 1500)
+      gap: 6rem 1.5rem
+    +screen('max', 1200)
+      grid-template-columns: repeat(3,1fr)
+    +screen('max', 1023)
+      grid-template-columns: repeat(2,1fr)
+      gap: 5.5rem 3rem
+    +screen('max', 700)
+      grid-template-columns: 1fr
+      gap: 3rem
+  &__pic
+    width: 100%
+    object-fit: cover
+    flex-shrink: 0
+    max-width: 713px
+    border-radius: 6px
+  &__date
+    padding: 0.85rem 1.2rem
+    display: inline-block
+    +fs(18px)
+    margin-bottom: 1.8rem
+    margin-top: 3.5rem
+    border-radius: 100px
+    position: relative
+    z-index: 2
+    background: #f8f9f9
+    opacity: 0.7
+    +screen('max', 1500)
+      margin-top: 2.5rem
+      margin-bottom: 1.6rem
+      +fs(14px)
+      padding: 0.6rem 1rem
+  &__caption
+    font-weight: 500
+    +fs(26px)
+    line-height: 1.1
+    overflow: hidden
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    line-clamp: 2
+    -webkit-box-orient: vertical
+    +screen('max', 1500)
+      +fs(20px)
+  &__link
+    &_big
+      background: #f8f9f9
+      border-radius: 8px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      gap: 8rem
+      grid-column: 1 / 5
+      padding-right: 6rem
+      +screen('max', 1500)
+        gap: 5rem
+        padding-right: 5rem
+      +screen('max', 1200)
+        grid-column: 1 / 4
+      +screen('max', 1023)
+        grid-column: 1 / 3
+      +screen('max', 700)
+        display: none
+      .news-list__pic
+        width: 50%
+        +screen('max', 1023)
+          height: 301px
+      .news-list__date
+        margin-top: 0
+        margin-bottom: 2.5rem
+        background: var(--primary-invers)
+      .news-list__caption
+        +fs(42px)
+        margin-bottom: 2.5rem
+        font-weight: 400
+        display: block
+        +screen('max', 1200)
+          +fs(28px)
+        +screen('max', 1023)
+          +fs(24px)
+    &_first
+      +screen('max', 1200)
+        grid-row: 3 / 5
+      +screen('max', 1023)
+        grid-row: 4 / 6
+    &_right
+      flex-flow: row-reverse
+      padding-right: 0
+      padding-left: 6rem
+      +screen('max', 1500)
+        padding-left: 5rem
+    &_hidden
+      +screen('min', 1500)
+        display: none
+      +screen('max', 1023)
+        display: none
+  &__text
+    +fs(22px)
+    line-height: 1.3
+    color: #838c95
+    verflow: hidden
+    display: -webkit-box
+    -webkit-line-clamp: 3
+    line-clamp: 3
+    -webkit-box-orient: vertical
+    overflow: hidden
+    +screen('max', 1500)
+      display: none
+  .callback
+    grid-column: 1 / 5
+    +screen('max', 1200)
+      grid-column: 1 / 4
+    +screen('max', 1023)
+      grid-column: 1 / 3
+    +screen('max', 700)
+      grid-column: 1 / 2
+
+.pagination
+  margin: 8rem 0
+  display: flex
+  justify-content: center
+  align-items: center
+  gap: 1.2rem
+  +screen('max', 1500)
+    margin: 6rem 0
+  +screen('max', 1200)
+    gap: 1rem
+  +screen('max', 700)
+    margin: 3rem 0
+  &__btn
+    border: 1.33px solid #bdc0ca
+    border-radius: 6px
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 52px
+    height: 52px
+    transition: .5s ease
+    +fs(20px)
+    color: #838c95
+    +screen('max', 1200)
+      width: 48px
+      height: 48px
+      +fs(16px)
+    +screen('max', 700)
+      width: 45px
+      height: 45px
+      +fs(14px)
+    &:nth-last-of-type(2)
+      +screen('max', 700)
+        display: none
+    path
+      transition: .5s ease
+    &.active
+      background: var(--secondary)
+      border-color: var(--secondary)
+      color: var(--primary-invers)
+    &:hover
+      color: #4d545a
+      path
+        stroke: #4d545a
+    &_prev
+      margin-right: 1.8rem
+      +screen('max', 700)
+        margin-right: 0.5rem
+    &_next
+      margin-left: 1.8rem
+      +screen('max', 700)
+        margin-left: 0.5rem
+
+.news-single
+  &__date
+    padding: 0.85rem 1.2rem
+    display: inline-block
+    +fs(18px)
+    margin-bottom: 1.4rem
+    border-radius: 100px
+    position: relative
+    z-index: 2
+    background: #f8f9f9
+    opacity: 0.7
+    +screen('max', 1500)
+      +fs(14px)
+  &__title
+    font-weight: 400
+    +fs(56px)
+    line-height: 1.1
+    margin-bottom: 3rem
+    +screen('max', 1500)
+      +fs(42px)
+    +screen('max', 1023)
+      +fs(30px)
+      margin-bottom: 2.5rem
+    +screen('max', 700)
+      +fs(24px)
+  &__text
+    +fs(24px)
+    line-height: 1.3
+    color: #4d545a
+    +screen('max', 1500)
+      +fs(18px)
+    +screen('max', 700)
+      +fs(16px)
+    p
+      margin: 2rem 0
+    img
+      width: 100%
+      margin: 2rem 0
+      vertical-align: middle
+      border-radius: 4px

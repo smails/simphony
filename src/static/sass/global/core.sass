@@ -25,6 +25,13 @@ main
   +screen('max', 700)
     padding-inline: 1.5rem
 
+.section
+  margin: 7.5rem 0 2rem
+  +screen('max', 1200)
+    margin: 4.8rem 0 2rem
+  +screen('max', 700)
+    margin: 3.5rem 0 2rem
+
 .swiper
   margin-left: auto
   margin-right: auto
@@ -55,3 +62,9 @@ main
   position: relative
   transition-property: transform
   display: block
+
+.home
+  .header
+    &:before
+      +screen('min', 700)
+        content: none

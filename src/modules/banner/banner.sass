@@ -27,6 +27,7 @@
     top: 7rem
     left: 4rem
     color: var(--primary-invers)
+    box-sizing: border-box
     +screen('max', 1500)
       top: 5rem
       left: 3rem
@@ -41,9 +42,8 @@
       left: 0
       top: 0
       color: var(--primary)
-      border-top: 1px solid var(--primary)
       padding-top: 2rem
-      margin: 2rem 1rem 0
+      padding-inline: 2rem
   &__sign
     padding: 0.9rem 1.6rem
     background: var(--secondary)
@@ -80,7 +80,10 @@
     +screen('max', 1200)
       width: 222px
     +screen('max', 700)
-      width: calc(100% - 2rem)
+      width: 100%
+  .swiper-wrapper
+    +screen('max', 700)
+      gap: 0
   .swiper-slide
     +screen('max', 700)
       display: flex
