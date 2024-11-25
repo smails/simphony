@@ -1,0 +1,15 @@
+include ../static/pug/head
++head('404')
+body
+  main
+    +header()
+    +b.err-page
+      +e.inner.inner
+        +e.P.title 404
+        +e.P.txt Заблудились в музыке?
+        +e.P.sign Время открыть новую главу и создать гармонию вместе!
+        +e.control
+          +e.A.btn.btn_secondary(href="/") Перейти в каталог
+          +e.A.btn.btn_transparent-white(href="/") На главную
+    include ../modules/footer/footer
+  include ../static/pug/scripts
