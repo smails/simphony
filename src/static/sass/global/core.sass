@@ -152,3 +152,35 @@ main
     text-decoration: line-through
     color: #838c95
     +fs(12px)
+
+.text-box
+  &__title
+    font-weight: 500
+    text-transform: uppercase
+    +fs(30px)
+    margin-bottom: 1.5rem
+    +screen('max', 1500)
+      +fs(22px)
+    +screen('max', 700)
+      +fs(16px)
+  &__container
+    max-width: 1355px
+    +fs(24px)
+    +screen('max', 1500)
+      +fs(18px)
+    +screen('max', 1023)
+      +fs(16px)
+    +screen('max', 700)
+      +fs(14px)
+    h4
+      +fs(13.5px)
+      margin: 4rem 0 2rem
+      text-transform: uppercase
+      font-weight: 500
+      +screen('max', 1023)
+        +fs(16px)
+    p
+      color: #4d545a
+      margin-bottom: 1rem
+  &__btn
+    margin-top: 4rem

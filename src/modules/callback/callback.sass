@@ -103,6 +103,11 @@
     color: var(--primary)
     width: 100%
     line-height: 1
+    transition: .5s ease
+    &:hover
+      box-shadow: 0 21px 22px 0 rgba(0, 0, 0, 0.25)
+    &.error
+      outline: 1px solid #d94f4f
     +screen('max', 1500)
       +fs(16px)
     +screen('max', 1023)

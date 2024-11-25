@@ -1,5 +1,5 @@
 .btn
-  display: inline-block
+  display: inline-flex
   font-weight: 500
   +fs(16px)
   border-radius: 8px
@@ -13,6 +13,8 @@
   box-sizing: border-box
   text-align: center
   text-transform: uppercase
+  justify-content: center
+  align-items: center
   +screen('max', 1700)
     +fs(14px)
   +screen('max', 1500)
@@ -43,9 +45,6 @@
       path
         fill: var(--secondary)
   &_icon
-    display: inline-flex
-    align-items: center
-    justify-content: center
     gap: 1rem
     line-height: 1
     path
@@ -101,6 +100,7 @@
     transition: .5s ese
     opacity: .3
     cursor: pointer
+    box-sizing: border-box
     +screen('max', 1500)
       width: 55px
       height: 55px

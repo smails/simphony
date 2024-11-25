@@ -56,3 +56,59 @@
   .slider-btn
     +screen('max', 700)
       display: none
+
+.place-info
+  &__title
+    +fs(56px)
+    margin-bottom: 4.5rem
+    +screen('max', 1500)
+      +fs(42px)
+      margin-bottom: 2.5rem
+    +screen('max', 1200)
+      +fs(24px)
+    +screen('max', 1023)
+      +fs(30px)
+    +screen('max', 700)
+      +fs(24px)
+  &__wrapper
+    position: relative
+    +screen('max', 1023)
+      padding-bottom: max(7rem, 12vh)
+    .slider-btn
+      position: absolute
+      right: 0
+      top: 0
+      z-index: 2
+      +screen('max', 1200)
+        top: auto
+        bottom: 0
+      +screen('max', 1023)
+        left: 0
+        right: auto
+      &__border
+        +screen('max', 700)
+          width: 55px
+          height: 55px
+  &__pic
+    max-width: 900px
+    width: 65%
+    vertical-align: middle
+    margin-bottom: 4.5rem
+    +screen('max', 1200)
+      margin-bottom: 3rem
+    +screen('max', 700)
+      width: 100%
+      margin-bottom: 2.5rem
+  &__caption
+    +fs(24px)
+    line-height: 130%
+    color: #4d545a
+    +screen('max', 1500)
+      +fs(18px)
+    +screen('max', 1200)
+      max-width: 80%
+    +screen('max', 700)
+      +fs(15px)
+      max-width: 100%
+  .swiper-wrapper
+    gap: 0

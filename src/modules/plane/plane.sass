@@ -129,14 +129,14 @@
     &:last-of-type
       border-bottom: 0
     &[data-mobile]
-      +screen('max', 700)
+      +screen('max', 1200)
         font-size: 0
       &:before
-        +screen('max', 700)
+        +screen('max', 1200)
           content: attr(data-mobile)
           font-size: 18px
-          +screen('max', 1023)
-            font-size: 14px
+        +screen('max', 700)
+          font-size: 14px
     span
       opacity: .5
       font-weight: 400
@@ -319,9 +319,6 @@
   &__btn
     flex-grow: 1
     width: 50%
-    display: flex
-    justify-content: center
-    align-items: center
     height: 73px
     +screen('max', 1500)
       height: 55px

@@ -8,9 +8,15 @@ $('.js-open-modal').click((e) => {
   e.preventDefault();
   $('.popup').hide();
   const modal = e.target.getAttribute('href') != null ? e.target.getAttribute('href') : e.target.parentElement.getAttribute('href');
-  $(`[data-modal="${modal}"]`).fadeIn();
+  $(`[data-popup="${modal}"]`).fadeIn();
   if(modal == '#sale'){
     intSliderSale()
+  }
+  if(modal == '#pay'){
+    intSliderPay()
+  }
+  if(modal == '#place'){
+    intSliderPlace()
   }
 });
 
@@ -45,4 +51,33 @@ const intSliderSale = () => {
   })
 
 
+}
+const intSliderPay = () => {
+  $('.pay-info').each((index, item) => {
+    const swiper = new Swiper($(item).find('.swiper')[0], {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: '2px',
+      navigation: {
+        nextEl: $(item).find('.slider-btn__border_next')[0],
+        prevEl: $(item).find('.slider-btn__border_prev')[0],
+      },
+      modules: [Navigation],
+    });
+  })
+}
+
+const intSliderPlace = () => {
+  $('.place-info').each((index, item) => {
+    const swiper = new Swiper($(item).find('.swiper')[0], {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: '2px',
+      navigation: {
+        nextEl: $(item).find('.slider-btn__border_next')[0],
+        prevEl: $(item).find('.slider-btn__border_prev')[0],
+      },
+      modules: [Navigation],
+    });
+  })
 }

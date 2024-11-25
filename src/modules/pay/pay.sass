@@ -139,3 +139,67 @@
       height: 60px
     path
       transition: .5s ease
+
+.pay-info
+  position: relative
+  height: 100%
+  +screen('max', 1200)
+    padding-inline: 2rem
+  +screen('max', 1200)
+    padding: 0
+  &__icon
+    margin-bottom: 8rem
+    +screen('max', 1500)
+      width: 85px
+      height: 85px
+      margin-bottom: 5rem
+    +screen('max', 700)
+      width: 75px
+      height: 75px
+      margin-bottom: 4rem
+  &__numb
+    +fs(20px)
+    margin-bottom: 2rem
+    +screen('max', 1500)
+      +fs(12px)
+      margin-bottom: 0.5rem
+  &__caption
+    +fs(56px)
+    margin-bottom: 3.2rem
+    +screen('max', 1500)
+      +fs(42px)
+      margin-bottom: 2.5rem
+    +screen('max', 700)
+      +fs(24px)
+      margin-bottom: 1.2rem
+  &__txt
+    +fs(24px)
+    line-height: 130%
+    color: #4d545a
+    margin-bottom: 5rem
+    +screen('max', 1500)
+      +fs(18px)
+    +screen('max', 1200)
+      margin-bottom: 4rem
+    +screen('max', 700)
+      +fs(16px)
+      margin-bottom: 3rem
+  &__btn
+    +screen('max', 700)
+      width: 60%
+      +fs(12px)
+      padding: 2.2rem 1.8rem
+  .slider-btn
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: 2
+    +screen('max', 1200)
+      left: auto
+      right: 0
+    &__border
+      +screen('max', 700)
+        width: 55px
+        height: 55px
+  .swiper-wrapper
+    gap: 0
