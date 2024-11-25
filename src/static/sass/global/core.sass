@@ -68,3 +68,85 @@ main
     &:before
       +screen('min', 700)
         content: none
+
+.prod-item
+  border: 1px solid var(--secondary)
+  border-radius: 6px
+  background: var(--primary-invers)
+  padding: 2.5rem
+  box-sizing: border-box
+  +screen('max', 1500)
+    padding: 2rem
+  +screen('max', 1200)
+    padding: 1.5rem
+  +screen('max', 1023)
+    padding: 2rem
+  +screen('max', 700)
+    padding: 1.5rem
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 4rem
+  &__time
+    +fs(18px)
+    color: #838c95
+    +screen('max', 1500)
+      +fs(14px)
+  &__pic
+    width: 100%
+    vertical-align: middle
+    &_blur
+      filter: blur(9px)
+  &__foot
+    margin-top: 2rem
+    padding-top: 7rem
+    display: flex
+    justify-content: space-between
+    position: relative
+    flex-flow: column
+    +screen('max', 1500)
+      padding-top: 5rem
+  &__sale
+    position: absolute
+    top: 0
+    left: 0
+    border-radius: 100px
+    background-color: var(--secondary)
+    padding: 1rem 3.6rem 1rem 1.5rem
+    box-sizing: border-box
+    +fs(18px)
+    color: var(--primary-invers)
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3E%3Ccircle cx='8' cy='8' r='7.5' stroke='%23fff'/%3E%3Cpath fill='%23fff' d='M7.39078 4.3665h1.215l-.225 4.392h-.765l-.225-4.392Zm-.027 5.859c0-.174.06-.318.18-.432.126-.114.279-.171.459-.171s.33.057.45.171c.12.114.18.258.18.432s-.06.321-.18.441c-.12.114-.27.171-.45.171s-.333-.057-.459-.171c-.12-.12-.18-.267-.18-.441Z'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    background-position: 93% center
+    background-size: 16px
+    +screen('max', 1500)
+      +fs(12px)
+      padding: .8rem 3rem .8rem 1.2rem
+  &__title
+    +fs(34px)
+    line-height: 120%
+    color: #23262b
+    margin-bottom: 2rem
+    +screen('max', 1500)
+      +fs(26px)
+      margin-bottom: 0.8rem
+    +screen('max', 700)
+      +fs(24px)
+  &__prices
+    display: flex
+    align-items: center
+    gap: 1.5rem
+    margin-bottom: 5rem
+    +screen('max', 1500)
+      margin-bottom: 2.5rem
+  &__new
+    +fs(26px)
+    color: var(--secondary)
+    +screen('max', 1500)
+      +fs(18px)
+  &__old
+    text-decoration: line-through
+    color: #838c95
+    +fs(12px)

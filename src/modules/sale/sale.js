@@ -1,6 +1,6 @@
 import $ from 'jquery'
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 
 
 $('.sale').each((index, item) => {
@@ -11,7 +11,7 @@ $('.sale').each((index, item) => {
       nextEl: $(item).find('.slider-arrow_next')[0],
       prevEl: $(item).find('.slider-arrow_prev')[0],
     },
-    modules: [Navigation, Pagination],
+    modules: [Navigation],
     breakpoints: {
       767: {
         slidesPerView: 2.1,
