@@ -15,6 +15,10 @@
   +screen('max', 700)
     height: calc( 100% - 78px )
     top: 78px
+  &_gallery
+    z-index: 9999
+    height: 100%
+    top: 0
   &__overlay
     position: absolute
     top: 0
@@ -219,6 +223,34 @@
     +screen('max', 700)
       width: 100%
       margin-top: 3rem
+  &__wrap
+    background: #fff
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    padding: 5rem
+    box-sizing: border-box
+    position: relative
+    +screen('max', 1023)
+      padding: 2rem
+      display: flex
+      justify-content: center
+      gap: 2rem
+      flex-flow: column
+    +screen('max', 700)
+      padding: 2rem 0
+  &__holder
+    +fs(34px)
+    font-weight: 500
+    margin-bottom: 6rem
+    +screen('max', 1500)
+      margin-bottom: 4rem
+      +fs(22px)
+    +screen('max', 1023)
+      margin-bottom: 0
+    +screen('max', 700)
+      margin-bottom: 2rem
 
 .cookie
   position: fixed
@@ -266,3 +298,79 @@
       +fs(12px)
     +screen('max', 1200)
       padding: 1.5rem 2rem
+
+.slider-main
+  width: 100%
+  height: 700px
+  position: relative
+  +screen('max', 1500)
+    height: 590px
+  +screen('max', 1200)
+    height: 500px
+  +screen('max', 700)
+    height: 240px
+  .swiper
+    height: 100%
+  .swiper-slide
+    text-align: center
+    height: 100%
+  .swiper-wrapper
+    gap: 0
+    height: 100%
+  .slider-btn
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    width: 100%
+    justify-content: space-between
+    z-index: 2
+  &__pic
+    height: 100%
+    border-radius: 8px
+    object-fit: cover
+    +screen('max', 1500)
+      width: 100%
+      max-width: 1050px
+    +screen('max', 1200)
+      max-width: 785px
+
+.slider-thumb
+  height: 100px
+  max-width: 1050px
+  margin: 2rem auto
+  +screen('max', 1200)
+    max-width: 785px
+    height: 90px
+  +screen('max', 1023)
+    width: 100%
+  +screen('max', 700)
+    padding-inline: 1rem
+    box-sizing: border-box
+    height: 57px
+    margin-top: 0
+  .swiper
+    height: 100%
+  .swiper-slide
+    text-align: center
+    height: 100%
+    padding: .6rem
+    border-radius: 8px
+    border: 1px solid transparent
+    transition: .5s ease
+    box-sizing: border-box
+    width: 140px
+    +screen('max', 1200)
+      width: 120px
+    +screen('max', 700)
+      width: 85px
+    &.swiper-slide-active
+      border-color: var(--secondary)
+  .swiper-wrapper
+    gap: 0
+    height: 100%
+  &__pic
+    height: 100%
+    width: 100%
+    border-radius: 6px
+    object-fit: cover

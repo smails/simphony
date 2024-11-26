@@ -9,14 +9,17 @@ $('.js-open-modal').click((e) => {
   $('.popup').hide();
   const modal = e.target.getAttribute('href') != null ? e.target.getAttribute('href') : e.target.parentElement.getAttribute('href');
   $(`[data-popup="${modal}"]`).fadeIn();
-  if(modal == '#sale'){
+  if (modal == '#sale') {
     intSliderSale()
   }
-  if(modal == '#pay'){
+  if (modal == '#pay') {
     intSliderPay()
   }
-  if(modal == '#place'){
+  if (modal == '#place') {
     intSliderPlace()
+  }
+  if (modal == '#motion') {
+    intSliderGallery()
   }
 });
 
@@ -78,6 +81,34 @@ const intSliderPlace = () => {
         prevEl: $(item).find('.slider-btn__border_prev')[0],
       },
       modules: [Navigation],
+    });
+  })
+}
+
+const intSliderGallery = () => {
+  $('.slider-main').each((index, item) => {
+    const swiperNav = new Swiper($(item).next().find('.swiper')[0], {
+      loop: true,
+      slidesPerView: 'auto',
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    const swiper = new Swiper($(item).find('.swiper')[0], {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: '2px',
+      watchOverflow: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      preventInteractionOnTransition: true,
+      navigation: {
+        nextEl: $(item).find('.slider-btn__border_next')[0],
+        prevEl: $(item).find('.slider-btn__border_prev')[0],
+      },
+      modules: [Navigation],
+      thumbs: {
+        swiper: swiperNav
+      }
     });
   })
 }
