@@ -1,0 +1,276 @@
+.product
+  &__back
+    display: inline-flex
+    align-items: center
+    margin: 3rem 0
+    gap: 1.6rem
+    +fs(18px)
+    color: var(--primary)
+    +screen('max', 1200)
+      +fs(14px)
+    +screen('max', 700)
+      margin: 1.5rem 0 3.5rem
+      gap: 1.2rem
+    svg
+      +screen('max', 1200)
+        width: 30px
+        height: 30px
+  &__wrap
+    display: flex
+    gap: min(10rem, 5vw)
+    +screen('max', 1200)
+      flex-flow: column
+    +screen('max', 700)
+      gap: 3rem
+  &__outer-picture
+    max-width: 987px
+    width: 50%
+    +screen('max', 1200)
+      width: 100%
+      max-width: 100%
+  &__picture
+    position: relative
+    background: rgba(0, 0, 0, 0.03)
+    border-radius: 8px
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    padding: 10rem 2rem 4rem
+    box-sizing: border-box
+    height: clamp(346px, 42vw, 791px)
+    +screen('max', 1200)
+      height: 540px
+      padding: 16rem 2rem 3rem
+    +screen('max', 700)
+      height: calc(100vw - 3rem)
+      padding: 5rem 1rem 1rem
+    &:before
+      content: ''
+      width: 27px
+      height: 27px
+      position: absolute
+      bottom: 1.5rem
+      right: 1.5rem
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='27' fill='none'%3E%3Cg stroke='%230E302A' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' opacity='.3'%3E%3Cpath d='m15.9593 15.953 7.3638 7.3648m0 0v-7.3636m0 7.3636h-7.3638M11.0407 11.047 3.67693 3.68221m0 0-.00006 7.36359m.00006-7.36359h7.36377'/%3E%3C/g%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-size: contain
+      +screen('max', 1200)
+        display: none
+  &__nav
+    position: absolute
+    top: 4rem
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 3rem
+    width: 100%
+    +screen('max', 700)
+      gap: 2rem
+      top: 2rem
+  &__tab
+    +fs(18px)
+    opacity: 0.5
+    transition: .5s ease
+    cursor: pointer
+    +screen('max', 1500)
+      +fs(14px)
+    +screen('max', 700)
+      +fs(10px)
+    &.active
+      text-decoration: underline
+      text-decoration-skip-ink: none
+      opacity: 1
+  &__pic
+    vertical-align: middle
+    max-width: 100%
+    object-fit: contain
+    +screen('max', 1500)
+      height: 100%
+    +screen('max', 1023)
+      height: 100%
+  &__full
+    display: none
+    &:first-of-type
+      display: block
+  &__sign
+    color: #838c95
+    margin-top: 2rem
+    +screen('max', 1500)
+      +fs(12px)
+  &__title
+    +fs(42px)
+    font-weight: 400
+    text-transform: uppercase
+    margin-bottom: 2rem
+    +screen('max', 1500)
+      +fs(32px)
+      margin-bottom: 1.5rem
+    +screen('max', 700)
+      +fs(26px)
+  &__price
+    +fs(26px)
+    +screen('max', 1500)
+      +fs(20px)
+    +screen('max', 700)
+      +fs(18px)
+  &__content
+    max-width: 736px
+    width: 50%
+    +screen('max', 1200)
+      width: 100%
+      max-width: 100%
+  &__info
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 2rem 6rem
+    +screen('max', 1500)
+      gap: 1.5rem 4rem
+    +screen('max', 700)
+      grid-template-columns: 1fr
+      gap: 1.2rem
+  &__item
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    text-transform: uppercase
+    +fs(20px)
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      +fs(14px)
+    p
+      color: #838c95
+      opacity: 0.9
+      order: -1
+      flex-shrink: 0
+    span
+      flex-shrink: 0
+    &:before
+      content: ''
+      height: 2px
+      width: 100%
+      border-bottom: 1px dotted #4d545a
+      flex-grow: 1
+      position: relative
+      bottom: 5px
+  &__more
+    +fs(20px)
+    text-decoration: underline
+    text-decoration-skip-ink: none
+    color: var(--primary)
+    margin-top: 2.5rem
+    display: inline-block
+    +screen('max', 1500)
+      +fs(16px)
+      margin-top: 2rem
+    +screen('max', 700)
+      +fs(14px)
+      margin-top: 1.5rem
+  &__control
+    display: flex
+    gap: 2rem
+    width: 100%
+    +screen('max', 700)
+      gap: .8rem
+  &__btn
+    width: 44%
+    +screen('max', 700)
+      +fs(10px)
+      padding: 1.3rem 1rem
+    svg
+      +screen('max', 700)
+        width: 13px
+        height: 17px
+  &__ctr
+    flex-shrink: 0
+    svg
+      width: 79px
+      height: 79px
+      +screen('max', 1500)
+        width: 59px
+        height: 59px
+      +screen('max', 700)
+        width: 45px
+        height: 45px
+
+.banner-credit
+  background: #f5e6e1
+  opacity: 0.7
+  position: relative
+  border-radius: 8px
+  padding: 2.5rem
+  box-sizing: border-box
+  margin: 3rem 0 6rem
+  +screen('max', 1500)
+    margin: 2.5rem 0 4rem
+    padding: 2rem
+  +screen('max', 700)
+    padding: 1.5rem
+    margin: 2rem 0 2.5rem
+  &__price
+    +fs(26px)
+    margin-bottom: 1.4rem
+    +screen('max', 1500)
+      +fs(20px)
+    +screen('max', 700)
+      +fs(16px)
+      margin-bottom: 1rem
+    span
+      text-decoration: underline
+      text-decoration-skip-ink: none
+      color: var(--secondary)
+  &__txt
+    line-height: 120%
+    color: #838c95
+    +fs(18px)
+    +screen('max', 1500)
+      +fs(14px)
+    +screen('max', 700)
+      +fs(10px)
+  &__btn
+    border: 1.33px solid var(--secondary)
+    border-radius: 8px
+    background: var(--primary-invers)
+    padding: 1rem 1.3rem
+    box-sizing: border-box
+    color: var(--secondary)
+    position: absolute
+    top: -1.6rem
+    right: 1.6rem
+    +screen('max', 1500)
+      +fs(12px)
+    +screen('max', 700)
+      +fs(10px)
+      padding: 0.9rem 1rem
+      right: 0
+
+.product-tag
+  margin: 5rem 0 8rem
+  +screen('max', 1200)
+    margin: 3rem 0 5rem
+  &__title
+    +fs(20px)
+    text-transform: uppercase
+    color: #23262b
+    margin-bottom: 2.5rem
+    +screen('max', 1500)
+      +fs(16px)
+  &__list
+    display: flex
+    flex-wrap: wrap
+    gap: 2rem
+    +screen('max', 700)
+      gap: .8rem
+  &__link
+    background: rgba(211, 217, 216, 0.38)
+    border-radius: 133px
+    padding: 1.2rem 1.6rem
+    box-sizing: border-box
+    +fs(18px)
+    line-height: 1
+    +screen('max', 1500)
+      +fs(14px)
+      padding: 1rem 1.2rem
+    +screen('max', 700)
+      +fs(12px)
+      padding: 1rem

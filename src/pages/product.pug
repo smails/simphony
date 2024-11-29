@@ -1,0 +1,13 @@
+include ../static/pug/head
++head('Продукт')
+body
+  main.home
+    +header()
+    include ../modules/product/product
+    include ../modules/placement/placement
+    include ../modules/places/places
+    include ../modules/motion/motion
+    include ../modules/pay/pay
+    include ../modules/similar/similar
+    include ../modules/footer/footer
+  include ../static/pug/scripts
