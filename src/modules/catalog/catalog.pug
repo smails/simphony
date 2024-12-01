@@ -1,0 +1,246 @@
++b.catalog
+  +e.inner.inner
+    +e.H1.title Подбор квартир по параметрам
+    include filter
+    +e.body
+      +b.catalog-sort
+        +e.left
+          +b.DETAILS.select
+            +e.SUMMARY.summary Сначала дешевле
+            +e.list
+              label
+                +e.INPUT.hidden(type="radio")
+                p  Дом 1, подъезд 4
+              label
+                +e.INPUT.hidden(type="radio")
+                p  Дом 1, подъезд 2
+              label
+                +e.INPUT.hidden(type="radio")
+                p  Дом 1, подъезд 3
+          +e.links
+            +e.A.link.active(href="#") Все
+            +e.A.link(href="#") По похожим параметрам
+        +e.right
+          +e.count Найдено 
+            span 1 200 планировок
+          +e.control
+            +e.btn.active
+              svg(xmlns='http://www.w3.org/2000/svg' width='66' height='66' fill='none' viewBox="0 0 66 66")
+                circle(cx='33' cy='33' r='33' fill='#fff' opacity='.1')
+                g(fill='#fff' opacity='.3')
+                  rect(width='8' height='8' x='22' y='22' rx='1.33473')
+                  rect(width='8' height='8' x='22' y='36' rx='1.33473')
+                  rect(width='8' height='8' x='36' y='22' rx='1.33473')
+                  rect(width='8' height='8' x='36' y='36' rx='1.33473')
+            +e.btn
+              svg(xmlns='http://www.w3.org/2000/svg' width='66' height='66' fill='none' viewBox="0 0 66 66")
+                circle(cx='33' cy='33' r='33' fill='#fff' opacity='.1')
+                g(fill='#fff' opacity='.3')
+                  rect(width='23' height='7' x='22' y='24' rx='1.33473')
+                  rect(width='23' height='7' x='22' y='35' rx='1.33473')
+      +e.list
+        +b.prod-item
+          +e.head
+            +e.info-block
+              +e.P.number Дом 3, к5
+              +e.time Срок сдачи 1 кв 2024
+            +e.BUTTON.favor
+              svg(xmlns='http://www.w3.org/2000/svg' width='30' height='28' fill='none')
+                path(fill='#D7DBE0' d='M15.93 27.3635c-.51.182-1.35.182-1.86 0C9.72 25.8618 0 19.5972 0 8.97921 0 4.29213 3.735.5 8.34.5c2.73 0 5.145 1.33483 6.66 3.39775C16.515 1.83483 18.945.5 21.66.5 26.265.5 30 4.29213 30 8.97921 30 19.5972 20.28 25.8618 15.93 27.3635Z')
+          +e.middle
+            .swiper
+              .swiper-wrapper
+                .swiper-slide
+                  +e.IMG.pic(src='/img/prod-1.png' alt='')
+                .swiper-slide
+                  +e.IMG.pic(src='/img/prod-1.png' alt='')
+              .swiper-dots
+          +e.bottom
+            +e.title Студия 24.38 м²
+            +e.P.sign Этаж 12 / 12, подъезд 10
+            +e.price-big 2 559 600 ₽
+            +e.info
+              +e.P.line Ипотека от 
+                a(href="#")  8 599 ₽/мес
+              +e.P.line Первоначальный взнос от 
+                a(href="#")  128 599 ₽
+            +e.tags
+              +e.A.tag(href="#") Мастер-спальня
+              +e.A.tag(href="#") Двухуровневая
+              +e.more +1
+        +b.prod-item
+          +e.head
+            +e.time Срок сдачи 1 кв 2024
+            +e.BUTTON.favor
+              svg(xmlns='http://www.w3.org/2000/svg' width='30' height='28' fill='none')
+                path(fill='#D7DBE0' d='M15.93 27.3635c-.51.182-1.35.182-1.86 0C9.72 25.8618 0 19.5972 0 8.97921 0 4.29213 3.735.5 8.34.5c2.73 0 5.145 1.33483 6.66 3.39775C16.515 1.83483 18.945.5 21.66.5 26.265.5 30 4.29213 30 8.97921 30 19.5972 20.28 25.8618 15.93 27.3635Z')
+          +e.middle
+            +e.IMG.pic(src='/img/prod-1.png' alt='')
+          +e.foot
+            +e.sale Квартира со скидкой 30%
+            +e.title Студия 24.38 м²
+            +e.prices
+              +e.new 2 559 600 ₽
+              +e.old 18 000 000 ₽
+            +e.A.btn.btn узнать цену
+        +b.prod-item
+          +e.head
+            +e.time Срок сдачи 1 кв 2024
+            +e.BUTTON.favor
+              svg(xmlns='http://www.w3.org/2000/svg' width='30' height='28' fill='none')
+                path(fill='#D7DBE0' d='M15.93 27.3635c-.51.182-1.35.182-1.86 0C9.72 25.8618 0 19.5972 0 8.97921 0 4.29213 3.735.5 8.34.5c2.73 0 5.145 1.33483 6.66 3.39775C16.515 1.83483 18.945.5 21.66.5 26.265.5 30 4.29213 30 8.97921 30 19.5972 20.28 25.8618 15.93 27.3635Z')
+          +e.middle
+            +e.IMG.pic_blur(src='/img/prod-1.png' alt='')
+          +e.foot
+            +e.sale Квартира со скидкой 30%
+            +e.title Студия 24.38 м²
+            +e.prices
+              +e.new 2 559 600 ₽
+              +e.old 18 000 000 ₽
+            +e.A.btn.btn узнать цену
+        +b.prod-item
+          +e.head
+            +e.time Срок сдачи 1 кв 2024
+            +e.BUTTON.favor
+              svg(xmlns='http://www.w3.org/2000/svg' width='30' height='28' fill='none')
+                path(fill='#D7DBE0' d='M15.93 27.3635c-.51.182-1.35.182-1.86 0C9.72 25.8618 0 19.5972 0 8.97921 0 4.29213 3.735.5 8.34.5c2.73 0 5.145 1.33483 6.66 3.39775C16.515 1.83483 18.945.5 21.66.5 26.265.5 30 4.29213 30 8.97921 30 19.5972 20.28 25.8618 15.93 27.3635Z')
+          +e.middle
+            +e.IMG.pic_blur(src='/img/prod-1.png' alt='')
+          +e.foot
+            +e.sale Квартира со скидкой 30%
+            +e.title Студия 24.38 м²
+            +e.prices
+              +e.new 2 559 600 ₽
+              +e.old 18 000 000 ₽
+            +e.A.btn.btn узнать цену
+        +b.prod-item
+          +e.head
+            +e.info-block
+              +e.P.number Дом 3, к5
+              +e.time Срок сдачи 1 кв 2024
+            +e.BUTTON.favor
+              svg(xmlns='http://www.w3.org/2000/svg' width='30' height='28' fill='none')
+                path(fill='#D7DBE0' d='M15.93 27.3635c-.51.182-1.35.182-1.86 0C9.72 25.8618 0 19.5972 0 8.97921 0 4.29213 3.735.5 8.34.5c2.73 0 5.145 1.33483 6.66 3.39775C16.515 1.83483 18.945.5 21.66.5 26.265.5 30 4.29213 30 8.97921 30 19.5972 20.28 25.8618 15.93 27.3635Z')
+          +e.middle
+            .swiper
+              .swiper-wrapper
+                .swiper-slide
+                  +e.IMG.pic(src='/img/prod-1.png' alt='')
+                .swiper-slide
+                  +e.IMG.pic(src='/img/prod-1.png' alt='')
+              .swiper-dots
+          +e.bottom
+            +e.title Студия 24.38 м²
+            +e.P.sign Этаж 12 / 12, подъезд 10
+            +e.price-big 2 559 600 ₽
+            +e.info
+              +e.P.line Ипотека от 
+                a(href="#")  8 599 ₽/мес
+              +e.P.line Первоначальный взнос от 
+                a(href="#")  128 599 ₽
+            +e.tags
+              +e.A.tag(href="#") Мастер-спальня
+              +e.A.tag(href="#") Двухуровневая
+              +e.more +1
+        +b.prod-item
+          +e.head
+            +e.info-block
+              +e.P.number Дом 3, к5
+              +e.time Срок сдачи 1 кв 2024
+            +e.BUTTON.favor
+              svg(xmlns='http://www.w3.org/2000/svg' width='30' height='28' fill='none')
+                path(fill='#D7DBE0' d='M15.93 27.3635c-.51.182-1.35.182-1.86 0C9.72 25.8618 0 19.5972 0 8.97921 0 4.29213 3.735.5 8.34.5c2.73 0 5.145 1.33483 6.66 3.39775C16.515 1.83483 18.945.5 21.66.5 26.265.5 30 4.29213 30 8.97921 30 19.5972 20.28 25.8618 15.93 27.3635Z')
+          +e.middle
+            .swiper
+              .swiper-wrapper
+                .swiper-slide
+                  +e.IMG.pic(src='/img/prod-1.png' alt='')
+                .swiper-slide
+                  +e.IMG.pic(src='/img/prod-1.png' alt='')
+              .swiper-dots
+          +e.bottom
+            +e.title Студия 24.38 м²
+            +e.P.sign Этаж 12 / 12, подъезд 10
+            +e.price-big 2 559 600 ₽
+            +e.info
+              +e.P.line Ипотека от 
+                a(href="#")  8 599 ₽/мес
+              +e.P.line Первоначальный взнос от 
+                a(href="#")  128 599 ₽
+            +e.tags
+              +e.A.tag(href="#") Мастер-спальня
+              +e.A.tag(href="#") Двухуровневая
+              +e.more +1
+        +b.prod-item
+          +e.head
+            +e.info-block
+              +e.P.number Дом 3, к5
+              +e.time Срок сдачи 1 кв 2024
+            +e.BUTTON.favor
+              svg(xmlns='http://www.w3.org/2000/svg' width='30' height='28' fill='none')
+                path(fill='#D7DBE0' d='M15.93 27.3635c-.51.182-1.35.182-1.86 0C9.72 25.8618 0 19.5972 0 8.97921 0 4.29213 3.735.5 8.34.5c2.73 0 5.145 1.33483 6.66 3.39775C16.515 1.83483 18.945.5 21.66.5 26.265.5 30 4.29213 30 8.97921 30 19.5972 20.28 25.8618 15.93 27.3635Z')
+          +e.middle
+            .swiper
+              .swiper-wrapper
+                .swiper-slide
+                  +e.IMG.pic(src='/img/prod-1.png' alt='')
+                .swiper-slide
+                  +e.IMG.pic(src='/img/prod-1.png' alt='')
+              .swiper-dots
+          +e.bottom
+            +e.title Студия 24.38 м²
+            +e.P.sign Этаж 12 / 12, подъезд 10
+            +e.price-big 2 559 600 ₽
+            +e.info
+              +e.P.line Ипотека от 
+                a(href="#")  8 599 ₽/мес
+              +e.P.line Первоначальный взнос от 
+                a(href="#")  128 599 ₽
+            +e.tags
+              +e.A.tag(href="#") Мастер-спальня
+              +e.A.tag(href="#") Двухуровневая
+              +e.more +1
+            +e.sale-bottom
+              b 30% 
+              | скидка
+        +b.prod-item
+          +e.head
+            +e.info-block
+              +e.P.number Дом 3, к5
+              +e.time Срок сдачи 1 кв 2024
+            +e.BUTTON.favor
+              svg(xmlns='http://www.w3.org/2000/svg' width='30' height='28' fill='none')
+                path(fill='#D7DBE0' d='M15.93 27.3635c-.51.182-1.35.182-1.86 0C9.72 25.8618 0 19.5972 0 8.97921 0 4.29213 3.735.5 8.34.5c2.73 0 5.145 1.33483 6.66 3.39775C16.515 1.83483 18.945.5 21.66.5 26.265.5 30 4.29213 30 8.97921 30 19.5972 20.28 25.8618 15.93 27.3635Z')
+          +e.middle
+            .swiper
+              .swiper-wrapper
+                .swiper-slide
+                  +e.IMG.pic(src='/img/prod-1.png' alt='')
+                .swiper-slide
+                  +e.IMG.pic(src='/img/prod-1.png' alt='')
+              .swiper-dots
+          +e.bottom
+            +e.title Студия 24.38 м²
+            +e.P.sign Этаж 12 / 12, подъезд 10
+            +e.price-big 2 559 600 ₽
+            +e.info
+              +e.P.line Ипотека от 
+                a(href="#")  8 599 ₽/мес
+              +e.P.line Первоначальный взнос от 
+                a(href="#")  128 599 ₽
+            +e.tags
+              +e.A.tag(href="#") Мастер-спальня
+              +e.A.tag(href="#") Двухуровневая
+              +e.more +1
+      +b.pagination
+        +e.A.btn_prev.js-open-modal(href="#news")
+          svg(xmlns='http://www.w3.org/2000/svg' width='8' height='14' fill='none')
+            path(stroke='#BDC0CA' stroke-linecap='round' stroke-width='1.60168' d='M6.66406 13.1655 1.32513 7.15922l5.33893-6.0063')
+        +e.A.btn.active.js-open-modal(href="#news") 1
+        +e.A.btn.js-open-modal(href="#news") 2
+        +e.A.btn.js-open-modal(href="#news") 3
+        +e.A.btn.js-open-modal(href="#news") 4
+        +e.A.btn.js-open-modal(href="#news") 5
+        +e.A.btn_next.js-open-modal(href="#news")
+          svg(xmlns='http://www.w3.org/2000/svg' width='8' height='14' fill='none')
+            path(stroke='#BDC0CA' stroke-linecap='round' stroke-width='1.60168' d='m1.33594 13.1655 5.33893-6.00628-5.33893-6.0063')

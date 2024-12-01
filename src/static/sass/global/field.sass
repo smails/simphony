@@ -14,6 +14,7 @@
     position: relative
     +fs(20px)
     color: var(--primary-invers)
+    box-sizing: border-box
     +screen('max', 1500)
       +fs(16px)
       padding-left: 30px
@@ -49,3 +50,64 @@
       font-style: normal
       color: #000
       color: rgba(255, 255, 255, 0.7)
+
+.select
+  position: relative
+  flex-grow: 1
+  +screen('max', 700)
+    width: 100%
+  &[open]
+    .select__summary::before
+      transform: translateY(-50%) rotate(180deg)
+  &__summary
+    padding: 2.8rem 1.5rem
+    box-sizing: border-box
+    border: 1px solid rgba(14, 48, 42, 0.3)
+    border-radius: 11px
+    background: none
+    +fs(20px)
+    line-height: 110%
+    position: relative
+    cursor: pointer
+    width: 100%
+    +screen('max', 1500)
+      +fs(16px)
+      padding: 1.9rem 1.5rem
+    +screen('max', 600)
+      +fs(14px)
+      padding: 2rem 1.5rem
+    &:before
+      content: ''
+      width: 12px
+      height: 5px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' fill='none'%3E%3Cpath stroke='%230E302A' stroke-linecap='round' stroke-width='1.5' d='m1 1.3335 6 5.33333 6-5.33333'/%3E%3C/svg%3E")
+      background-position: center
+      background-size: contain
+      background-repeat: no-repeat
+      position: absolute
+      right: 1.5rem
+      top: 50%
+      transform: translateY(-50%)
+      transition: .5s ease
+  &__list
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    margin-top: 7px
+    border-radius: 15px
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.09)
+    background: var(--white)
+    border: 1px solid var(--primary)
+    padding: .8rem 1.5rem
+    z-index: 2
+    list-style: none
+    box-sizing: border-box
+    background: var(--primary-invers)
+    label
+      +fs(20px)
+      display: block
+      margin: 1rem 0
+      cursor: pointer
+  &__hidden
+    display: none

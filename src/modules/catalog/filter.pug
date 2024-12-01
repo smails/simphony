@@ -1,0 +1,278 @@
++b.catalog-filter
+  +e.top
+    +e.box
+      +e.P.caption Дом и подъезд
+      +b.DETAILS.select
+        +e.SUMMARY.summary Сначала дешевле
+        +e.list
+          label
+            +e.INPUT.hidden(type="radio")
+            p  Дом 1, подъезд 4
+          label
+            +e.INPUT.hidden(type="radio")
+            p  Дом 1, подъезд 2
+          label
+            +e.INPUT.hidden(type="radio")
+            p  Дом 1, подъезд 3
+    +e.box
+      +e.caption Комнатность
+      +e.wrap
+        +e.LABEL.radio
+          +e.INPUT.hidden(type="checkbox" name="room" value='Студия' checked)
+          +e.SPAN.txt Студия
+        +e.LABEL.radio
+          +e.INPUT.hidden(type="checkbox" name="room" value='1')
+          +e.SPAN.txt 1
+        +e.LABEL.radio
+          +e.INPUT.hidden(type="checkbox" name="room" value='2')
+          +e.SPAN.txt 2
+        +e.LABEL.radio
+          +e.INPUT.hidden(type="checkbox" name="room" value='3')
+          +e.SPAN.txt 3
+    +e.box
+      +e.caption Общая площадь, м²
+      +e.row.squere
+        +e.group
+          input(type="hidden" name="PRICE_START" id="PRICE_START" class="price_start" value="1")
+          +e.field.range-start 0
+        +e.group
+          input(type="hidden" name="PRICE_END" class="price_end" value="25")
+          +e.field.range-end 0
+        .slider
+    +e.box
+      +e.sort
+        +e.btn.active
+          span Стоимость,₽ 
+          svg(xmlns='http://www.w3.org/2000/svg' width='17' height='16' fill='none' viewBox="0 0 17 16")
+            g(opacity='.4')
+              circle(cx='8.16675' cy='8' r='7.5' stroke=' #838c95')
+              path(fill=' #838c95' d='M7.82187 3.5h1.35l-.25 4.88h-.85l-.25-4.88Zm-.03 6.51c0-.19333.06666-.35333.2-.48.14-.12667.31-.19.51-.19s.36666.06333.5.19c.13333.12667.2.28667.2.48 0 .1933-.06667.3567-.2.49-.13334.1267-.3.19-.5.19s-.37-.0633-.51-.19c-.13334-.1333-.2-.2967-.2-.49Z')
+        +e.btn
+          span Первоначальный взнос,₽ 
+          svg(xmlns='http://www.w3.org/2000/svg' width='17' height='16' fill='none' viewBox="0 0 17 16")
+            g(opacity='.4')
+              circle(cx='8.16675' cy='8' r='7.5' stroke=' #838c95')
+              path(fill=' #838c95' d='M7.82187 3.5h1.35l-.25 4.88h-.85l-.25-4.88Zm-.03 6.51c0-.19333.06666-.35333.2-.48.14-.12667.31-.19.51-.19s.36666.06333.5.19c.13333.12667.2.28667.2.48 0 .1933-.06667.3567-.2.49-.13334.1267-.3.19-.5.19s-.37-.0633-.51-.19c-.13334-.1333-.2-.2967-.2-.49Z')
+        +e.btn
+          span Платеж,₽ 
+          svg(xmlns='http://www.w3.org/2000/svg' width='17' height='16' fill='none' viewBox="0 0 17 16")
+            g(opacity='.4')
+              circle(cx='8.16675' cy='8' r='7.5' stroke=' #838c95')
+              path(fill=' #838c95' d='M7.82187 3.5h1.35l-.25 4.88h-.85l-.25-4.88Zm-.03 6.51c0-.19333.06666-.35333.2-.48.14-.12667.31-.19.51-.19s.36666.06333.5.19c.13333.12667.2.28667.2.48 0 .1933-.06667.3567-.2.49-.13334.1267-.3.19-.5.19s-.37-.0633-.51-.19c-.13334-.1333-.2-.2967-.2-.49Z')
+      +e.row.price
+        +e.group
+          input(type="hidden" name="PRICE_START" id="PRICE_START" class="price_start" value="1")
+          +e.field.range-start 0
+        +e.group
+          input(type="hidden" name="PRICE_END" class="price_end" value="25")
+          +e.field.range-end 0
+        .slider
+  +e.bottom
+    +e.line
+      +e.box
+        +e.caption Этаж
+        +e.row.squere
+          +e.group
+            input(type="hidden" name="PRICE_START" id="PRICE_START" class="price_start" value="1")
+            +e.field.range-start 0
+          +e.group
+            input(type="hidden" name="PRICE_END" class="price_end" value="25")
+            +e.field.range-end 0
+          .slider
+      +e.box
+        +e.P.caption Срок сдачи
+        +b.DETAILS.select
+          +e.SUMMARY.summary 1 квартал 2023
+          +e.list
+            label
+              +e.INPUT.hidden(type="radio")
+              p  1 квартал 2023
+            label
+              +e.INPUT.hidden(type="radio")
+              p  1 квартал 2023
+      +e.box
+        +e.P.caption Вид из окна
+        +b.DETAILS.select
+          +e.SUMMARY.summary Любой
+          +e.list
+            label
+              +e.INPUT.hidden(type="radio")
+              p  Любой
+            label
+              +e.INPUT.hidden(type="radio")
+              p  Любой
+      +e.box
+        +e.P.caption Акции
+        +b.DETAILS.select
+          +e.SUMMARY.summary Все 
+            span (16)
+          +e.list
+            label
+              +e.INPUT.hidden(type="radio")
+              p  Все 
+                span (16)
+            label
+              +e.INPUT.hidden(type="radio")
+              p  Все 
+                span (16)
+    +e.hold
+      +e.P.holder Особенности
+      +e.checks
+        each item in ['Терраса ', 'Мастер-спальня ', 'Двухуровневая ', 'Гардеробная ', 'Гардеробная с окном ', 'Лоджия на две комнаты ', 'Возможность второго этажа ']
+          +b.LABEL.check
+            +e.INPUT.hidden(type="checkbox")
+            +e.SPAN.txt=item
+  +e.control
+    +e.left
+      +e.all-filter
+        svg(xmlns='http://www.w3.org/2000/svg' width='25' height='24' fill='none')
+          path(stroke='#fff' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' d='M19.5 22V11M19.5 7V2M12.5 22v-5M12.5 13V2M5.5 22V11M5.5 7V2M3.5 11h4M17.5 11h4M10.5 13h4')
+        span Все фильтры
+      +e.open
+        span Раскрыть фильтр
+        svg(xmlns='http://www.w3.org/2000/svg' width='14' height='10' fill='none')
+          path(stroke='#CE8369' stroke-linecap='round' stroke-width='1.6' d='m1 2.8335 6 5.33333 6-5.33333')
+      +e.reset
+        span Очистить фильтр
+        svg(xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='none')
+          path(stroke='#838C95' stroke-linecap='round' d='m2 2 11.3333 11.3333M13.332 2 1.9987 13.3333')
+
+    +e.right
+      +e.A.link.btn_transparent На генплане
+      +e.A.link.btn_transparent Шахматка
+
++b.modal-filter
+  +e.overlay
+  +e.container
+    +e.BUTTON.close
+      svg(xmlns='http://www.w3.org/2000/svg' width='26' height='26' fill='none')
+        path(fill='#838C95' fill-rule='evenodd' d='M25.1244 1.08154c.1953-.19526.1953-.51185 0-.7071-.1952-.19527-.5118-.19527-.7071 0L12.7501 12.0416 1.0828.3743C.88754.17904.57096.17904.3757.3743c-.19527.19527-.19526.51185 0 .70711L12.043 12.7487.37629 24.4155c-.19526.1952-.19526.5118 0 .7071.19526.1952.51184.1952.70711 0l11.6667-11.6668L24.4173 25.123c.1953.1953.5119.1953.7071 0 .1953-.1952.1953-.5118 0-.7071L13.4572 12.7487 25.1244 1.08154Z' clip-rule='evenodd')
+    +e.P.title Фильтры
+    +e.list
+      +e.box
+        +e.P.caption Дом и подъезд
+        +b.DETAILS.select
+          +e.SUMMARY.summary Сначала дешевле
+          +e.list
+            label
+              +e.INPUT.hidden(type="radio")
+              p  Дом 1, подъезд 4
+            label
+              +e.INPUT.hidden(type="radio")
+              p  Дом 1, подъезд 2
+            label
+              +e.INPUT.hidden(type="radio")
+              p  Дом 1, подъезд 3
+      +e.box
+        +e.caption Комнатность
+        +e.wrap
+          +e.LABEL.radio
+            +e.INPUT.hidden(type="checkbox" name="room" value='Студия' checked)
+            +e.SPAN.txt Студия
+          +e.LABEL.radio
+            +e.INPUT.hidden(type="checkbox" name="room" value='1')
+            +e.SPAN.txt 1
+          +e.LABEL.radio
+            +e.INPUT.hidden(type="checkbox" name="room" value='2')
+            +e.SPAN.txt 2
+          +e.LABEL.radio
+            +e.INPUT.hidden(type="checkbox" name="room" value='3')
+            +e.SPAN.txt 3
+      +e.box
+        +e.caption Общая площадь, м²
+        +e.row.squere
+          +e.group
+            input(type="hidden" name="PRICE_START" id="PRICE_START" class="price_start" value="1")
+            +e.field.range-start 0
+          +e.group
+            input(type="hidden" name="PRICE_END" class="price_end" value="25")
+            +e.field.range-end 0
+          .slider
+      +e.box
+        +e.sort
+          +e.btn.active
+            span Стоимость,₽ 
+            svg(xmlns='http://www.w3.org/2000/svg' width='17' height='16' fill='none' viewBox="0 0 17 16")
+              g(opacity='.4')
+                circle(cx='8.16675' cy='8' r='7.5' stroke=' #838c95')
+                path(fill=' #838c95' d='M7.82187 3.5h1.35l-.25 4.88h-.85l-.25-4.88Zm-.03 6.51c0-.19333.06666-.35333.2-.48.14-.12667.31-.19.51-.19s.36666.06333.5.19c.13333.12667.2.28667.2.48 0 .1933-.06667.3567-.2.49-.13334.1267-.3.19-.5.19s-.37-.0633-.51-.19c-.13334-.1333-.2-.2967-.2-.49Z')
+          +e.btn
+            span Первоначальный взнос,₽ 
+            svg(xmlns='http://www.w3.org/2000/svg' width='17' height='16' fill='none' viewBox="0 0 17 16")
+              g(opacity='.4')
+                circle(cx='8.16675' cy='8' r='7.5' stroke=' #838c95')
+                path(fill=' #838c95' d='M7.82187 3.5h1.35l-.25 4.88h-.85l-.25-4.88Zm-.03 6.51c0-.19333.06666-.35333.2-.48.14-.12667.31-.19.51-.19s.36666.06333.5.19c.13333.12667.2.28667.2.48 0 .1933-.06667.3567-.2.49-.13334.1267-.3.19-.5.19s-.37-.0633-.51-.19c-.13334-.1333-.2-.2967-.2-.49Z')
+          +e.btn
+            span Платеж,₽ 
+            svg(xmlns='http://www.w3.org/2000/svg' width='17' height='16' fill='none' viewBox="0 0 17 16")
+              g(opacity='.4')
+                circle(cx='8.16675' cy='8' r='7.5' stroke=' #838c95')
+                path(fill=' #838c95' d='M7.82187 3.5h1.35l-.25 4.88h-.85l-.25-4.88Zm-.03 6.51c0-.19333.06666-.35333.2-.48.14-.12667.31-.19.51-.19s.36666.06333.5.19c.13333.12667.2.28667.2.48 0 .1933-.06667.3567-.2.49-.13334.1267-.3.19-.5.19s-.37-.0633-.51-.19c-.13334-.1333-.2-.2967-.2-.49Z')
+        +e.row.price
+          +e.group
+            input(type="hidden" name="PRICE_START" id="PRICE_START" class="price_start" value="1")
+            +e.field.range-start 0
+          +e.group
+            input(type="hidden" name="PRICE_END" class="price_end" value="25")
+            +e.field.range-end 0
+          .slider
+      +e.box
+        +e.caption Этаж
+        +e.row.squere
+          +e.group
+            input(type="hidden" name="PRICE_START" id="PRICE_START" class="price_start" value="1")
+            +e.field.range-start 0
+          +e.group
+            input(type="hidden" name="PRICE_END" class="price_end" value="25")
+            +e.field.range-end 0
+          .slider
+      +e.box
+        +e.P.caption Срок сдачи
+        +b.DETAILS.select
+          +e.SUMMARY.summary 1 квартал 2023
+          +e.list
+            label
+              +e.INPUT.hidden(type="radio")
+              p  1 квартал 2023
+            label
+              +e.INPUT.hidden(type="radio")
+              p  1 квартал 2023
+      +e.box
+        +e.P.caption Вид из окна
+        +b.DETAILS.select
+          +e.SUMMARY.summary Любой
+          +e.list
+            label
+              +e.INPUT.hidden(type="radio")
+              p  Любой
+            label
+              +e.INPUT.hidden(type="radio")
+              p  Любой
+      +e.box
+        +e.P.caption Акции
+        +b.DETAILS.select
+          +e.SUMMARY.summary Все 
+            span (16)
+          +e.list
+            label
+              +e.INPUT.hidden(type="radio")
+              p  Все 
+                span (16)
+            label
+              +e.INPUT.hidden(type="radio")
+              p  Все 
+                span (16)
+      +e.hold
+        +e.P.holder Особенности
+        +e.checks
+          each item in ['Терраса ', 'Мастер-спальня ', 'Двухуровневая ', 'Гардеробная ', 'Гардеробная с окном ', 'Лоджия на две комнаты ', 'Возможность второго этажа ']
+            +b.LABEL.check
+              +e.INPUT.hidden(type="checkbox")
+              +e.SPAN.txt=item
+    +e.control
+      +e.BUTTON.submit.btn Показать планировки 
+        span (346)
+      +e.reset
+        span Очистить фильтр
+        svg(xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='none')
+          path(stroke='#838C95' stroke-linecap='round' d='m2 2 11.3333 11.3333M13.332 2 1.9987 13.3333')
