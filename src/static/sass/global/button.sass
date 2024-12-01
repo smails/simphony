@@ -20,7 +20,7 @@
   +screen('max', 1500)
     padding: 2rem 2.5rem
   &:hover
-    color: var(--hover)
+    background: var(--hover)
   &_secondary
     background: var(--secondary)
     &:hover
@@ -31,7 +31,8 @@
     background: none
     color: var(--primary)
     &:hover
-      background: var(--primary)
+      background: var(--hover)
+      border-color: var(--hover)
       color: var(--primary-invers)
       path
         fill: var(--primary-invers)

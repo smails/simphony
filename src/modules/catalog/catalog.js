@@ -33,3 +33,9 @@ $('.catalog-filter__open').click(function () {
   $(this).addClass('open').find('span').text('Скрыть фильтр');
   $('.catalog-filter__bottom').slideDown();
 })
+
+$('.catalog-sort__btn').click(function () {
+  $(this).addClass('active').siblings().removeClass('active');
+  $('.catalog__container').hide();
+  $('.catalog__container').eq($(this).index()).fadeIn('slow');
+})

@@ -36,7 +36,7 @@
       box-shadow: 0 4px 42px 0 rgba(0, 0, 0, 0.08)
   &__container
     display: none
-    &:nth-of-type(3)
+    &:nth-of-type(2)
       display: block
 
 .catalog-filter
@@ -90,6 +90,8 @@
       padding: 1.6rem 2rem
     +screen('max', 1200)
       padding: 2rem 1.6rem
+    &:hover
+      border-color: var(--hover)
   &__row
     display: flex
     padding: 2.6rem 2rem
@@ -144,6 +146,7 @@
     justify-content: center
     gap: 1rem
     cursor: pointer
+    transition: .5s ease
     +screen('max', 1500)
       +fs(13px)
       padding: 0.6rem 1rem
@@ -159,6 +162,8 @@
     svg
       +screen('max', 1500)
         width: 12px
+    &:hover
+      border-color: var(--hover)
   &__bottom
     margin-top: 4rem
     display: none
@@ -231,12 +236,18 @@
     +fs(20px)
     cursor: pointer
     color: var(--secondary)
+    transition: .5s ease
     +screen('max', 1500)
       +fs(16px)
     +screen('max', 1200)
       display: none
-    svg
+    path, svg
       transition: .5s ease
+    &:hover
+      background: var(--hover)
+      color: var(--primary-invers)
+      path
+        stroke: var(--primary-invers)
     &.open
       svg
         rotate: 180deg
@@ -248,10 +259,17 @@
     align-items: center
     gap: .6rem
     cursor: pointer
+    transition: .5s ease
     +screen('max', 1500)
       +fs(16px)
     +screen('max', 700)
       display: none
+    path
+      transition: .5s ease
+    &:hover
+      color: var(--hover)
+      path
+        stroke: var(--hover)
   &__all-filter
     border: 1px solid var(--secondary)
     border-radius: 6px
@@ -377,6 +395,7 @@
     align-items: center
     gap: 1.6rem
   &__btn
+    cursor: pointer
     svg
       +screen('max', 1500)
         width: 55px
@@ -386,6 +405,10 @@
         height: 50px
     circle
       transition: .5s ease
+    &:hover
+      circle
+        fill: var(--hover)
+        opacity: 1
     &.active
       circle
         fill: var(--secondary)
@@ -483,6 +506,8 @@
       text-decoration: underline
       text-decoration-skip-ink: none
       color: var(--secondary)
+    &:hover
+      color: var(--hover)
   &__tags
     display: flex
     align-items: center
@@ -598,6 +623,12 @@
       font-weight: 500
       +fs(24px)
       vertical-align: sub
+  &__favor
+    path
+      transition: .5s ease
+    &:hover
+      path
+        fill: var(--hover)
 
 .modal-filter
   position: fixed
@@ -1028,6 +1059,11 @@
       margin-right: 2rem
     +screen('max', 700)
       margin-right: 1rem
+    path
+      transition: .5s ease
+    &:hover
+      path
+        fill: var(--hover)
   &__sale-mobile
     +fs(12px)
     font-weight: 500
