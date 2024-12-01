@@ -1,13 +1,17 @@
 .location
   margin: 14rem auto
-  position: relative
-  max-width: 1920px
   +screen('max', 1500)
     margin: 10rem 0
   +screen('max', 1200)
     margin: 8rem 0
   +screen('max', 700)
     margin: 5.5rem 0
+  +screen('min', 1920)
+    overflow: hidden
+  &__containter
+    position: relative
+    max-width: 1920px
+    margin: 0 auto
   &__head
     position: relative
     margin-bottom: 5.6rem
@@ -86,6 +90,9 @@
       +fs(14px)
   &__pic
     max-width: 100%
+  .swiper
+    +screen('min', 1920)
+      overflow: initial
   .swiper-slide
     max-width: 594px
     +screen('max', 1200)
@@ -95,7 +102,7 @@
   .slider-btn
     position: absolute
     right: 5rem
-    top: -5px
+    top: 0px
     +screen('max', 1500)
       right: 3rem
     +screen('max', 1200)

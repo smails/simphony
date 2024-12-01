@@ -1,4 +1,6 @@
 .arc
+  +screen('min', 1920)
+    overflow: hidden
   &__inner
     max-width: 1920px
     margin: 0 auto
@@ -62,6 +64,9 @@
     opacity: 0.8
     +screen('max', 1500)
       +fs(14px)
+  .swiper
+    +screen('min', 1920)
+      overflow: initial
   .swiper-slide
     max-width: 1707px
     +screen('max', 1500)

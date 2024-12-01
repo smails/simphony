@@ -1,6 +1,5 @@
 .about
   padding-block: 6rem 8rem
-  position: relative
   +screen('max', 1200)
     padding-block: 5rem 8rem
     overflow: hidden
@@ -8,35 +7,36 @@
     padding-block: 5rem
   +screen('max', 700)
     padding-block: 5rem 20rem
-  &:before
-    content: ''
-    width: 189px
-    height: 157px
-    background-image: url(../icon/note.svg)
-    background-repeat: no-repeat
-    background-position: center
-    background-size: contain
-    position: absolute
-    top: 2rem
-    right: 0
-    +screen('max', 1500)
-      width: 160px
-    +screen('max', 1200)
-      width: 120px
-      top: -2rem
-      right: -30px
-    +screen('max', 1023)
-      top: -5rem
-    +screen('max', 700)
-      top: -7rem
+    position: relative
   &__inner
     display: flex
     align-items: center
     gap: min(11rem, 6.7vw)
+    position: relative
     +screen('max', 1023)
       flex-flow: column-reverse
     +screen('max', 700)
       gap: 2rem
+      position: initial
+    &:before
+      content: ''
+      width: 189px
+      height: 157px
+      background-image: url(../icon/note.svg)
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+      position: absolute
+      top: -2rem
+      right: 0
+      +screen('max', 1500)
+        width: 160px
+        top: -8rem
+      +screen('max', 1200)
+        width: 120px
+        right: -30px
+      +screen('max', 700)
+        top: -7rem
   &__video
     position: relative
     flex-shrink: 0

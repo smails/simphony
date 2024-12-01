@@ -8,13 +8,17 @@
   +screen('max', 1200)
     margin: 0.6rem
     padding-block: 4rem
+  &__inner
+    +screen('min', 1920)
+      max-width: 1920px
+      margin: 0 auto
   &__title
     font-size: 10.639vw
     position: relative
     margin-bottom: -9rem
     color: var(--primary-invers)
     +screen('min', 1921)
-      +fs(208px)
+      font-size: 205px
     +screen('max', 1500)
       font-size: 10.51vw
     +screen('max', 1023)
