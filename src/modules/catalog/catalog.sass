@@ -19,6 +19,12 @@
     padding: 0 4rem 1rem
     margin: 2.5rem -4rem
     border-radius: 8px
+    +screen('max', 1500)
+      margin: 2.5rem -2rem
+      padding: 0 2rem 1rem
+    +screen('max', 1200)
+      margin: 2.5rem -1rem
+      padding: 0 1.5rem 1rem
   &__list
     display: grid
     grid-template-columns: repeat(4, 1fr)
@@ -290,26 +296,6 @@
     &:last-of-type
       +screen('max', 700)
         display: none
-  .slider
-    position: absolute
-    width: calc(100% - 40px)
-    height: 2px
-    bottom: 0
-    left: 20px
-  .ui-slider-horizontal .ui-slider-range
-    top: 0
-    height: 100%
-    background-color: var(--secondary)
-    position: absolute
-
-  .ui-slider-horizontal .ui-slider-handle
-    top: -4px
-    background-color: var(--secondary)
-    height: 10px
-    width: 10px
-    border-radius: 50%
-    display: block
-    position: absolute
 
 .catalog-sort
   display: flex

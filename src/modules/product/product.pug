@@ -73,3 +73,70 @@
             svg(xmlns='http://www.w3.org/2000/svg' width='60' height='60' fill='none' viewBox="0 0 60 60")
               path(fill='#0E302A' d='M30.954 40.2531c-.34.1204-.9.1204-1.24 0-2.9-.9931-9.38-5.136-9.38-12.1578 0-3.0997 2.49-5.6075 5.56-5.6075 1.82 0 3.43.8827 4.44 2.247 1.01-1.3643 2.63-2.247 4.44-2.247 3.07 0 5.56 2.5078 5.56 5.6075 0 7.0218-6.48 11.1647-9.38 12.1578Z')
               circle(cx='30' cy='30' r='29.5' stroke='#0E302A')
+
+
++b.calc
+  +e.inner.inner
+    +e.H2.title Рассчитайте ипотеку
+    +e.filter
+      +e.BUTTON.btn.btn_transparent-green.active Ипотека 0.1
+      +e.BUTTON.btn.btn_transparent-green Семейная ипотека
+      +e.BUTTON.btn.btn_transparent-green Льготная ипотека
+      +e.BUTTON.btn.btn_transparent-green Без первого взноса
+      +e.BUTTON.btn.btn_transparent-green Другие ипотеки
+      +e.BUTTON.btn.btn_transparent-green Рассрочка
+      +e.BUTTON.btn.btn_transparent-green Трейд-ин
+      +e.BUTTON.btn.btn_transparent-green 100% оплата
+    +e.container
+      +e.left
+        +e.box
+          +e.caption Стоимость квартиры, млн ₽ 
+          +e.row.price
+            +e.group
+              input(type="hidden" name="PRICE_START" id="PRICE_START" class="price_start" value="1")
+              +e.field.range-start 0
+            +e.group
+              input(type="hidden" name="PRICE_END" class="price_end" value="25")
+              +e.field.range-end 0
+            .slider
+        +e.box
+          +e.caption Первоначальны взнос, ₽ 
+          +e.row_one.contribution
+            +e.group
+              input(type="hidden" name="PRICE_START" id="PRICE_START" class="price_start" value="1")
+              +e.field.range-start 0
+            +e.percent 30%
+            .slider
+        +e.box
+          +e.caption Срок
+          +e.row_one.year
+            +e.group
+              input(type="hidden" name="PRICE_START" id="PRICE_START" class="price_start" value="1")
+              +e.field.range-start 0
+            .slider 
+      +e.right
+        +e.P.count 20 предложений
+        +e.wrapper
+          - var bank = ['Альфа банк', 'ВТБ', 'МКБ', 'Совкомбанк' ]
+          - for (var k=1; k<5; k++){
+            - for (var i=1; i<5; i++){
+              +b.calc-item
+                +e.info
+                  +e.picture
+                    +e.IMG.pic(src='/img/bank-'+ i +'.png' alt='')
+                  +e.P.title=bank[i - 1]
+                +e.proposal
+                  +e.col
+                    +e.P.caption Ежемесячный платеж
+                    +e.P.val 34 305 ₽
+                  +e.col
+                    +e.P.caption Срок
+                    +e.P.val до 20 лет
+                  +e.col
+                    +e.P.caption Ставка
+                    +e.P.val от 3%
+                +e.control
+                  +e.A.btn.btn_transparent Подать заявку
+            - }
+          - }
+      +e.A.more.btn(href="#") получить консультацию

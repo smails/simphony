@@ -41,10 +41,19 @@
     background: none
     color: var(--primary-invers)
     &:hover
-      background: var(--secondary)
-      color: var(--secondary)
+      background: var(--hover)
+      color: var(--primary-invers)
+      border-color: var(--hover)
       path
-        fill: var(--secondary)
+        fill: var(--hover)
+  &_transparent-green
+    border: 1px solid rgba(14, 48, 42, 0.5)
+    background: none
+    color: var(--primary)
+    &:hover
+      background: var(--hover)
+      color: var(--primary-invers)
+      border-color: var(--hover)
   &_icon
     gap: 1rem
     line-height: 1
